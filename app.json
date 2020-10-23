@@ -51,8 +51,8 @@
       "class": "socket",
       "icon": "/drivers/BASICZBR3/assets/icon.svg",
       "images": {
-        "large": "/drivers/BASICZBR3/assets/images/large.jpg",
-        "small": "/drivers/BASICZBR3/assets/images/small.jpg"
+        "large": "/drivers/BASICZBR3/assets/images/large.png",
+        "small": "/drivers/BASICZBR3/assets/images/small.png"
       },
       "capabilities": [
         "onoff"
@@ -96,8 +96,8 @@
       "class": "sensor",
       "icon": "/drivers/DS01/assets/icon.svg",
       "images": {
-        "large": "/drivers/DS01/assets/images/large.jpg",
-        "small": "/drivers/DS01/assets/images/small.jpg"
+        "large": "/drivers/DS01/assets/images/large.png",
+        "small": "/drivers/DS01/assets/images/small.png"
       },
       "capabilities": [
         "alarm_contact",
@@ -143,8 +143,8 @@
       "class": "button",
       "icon": "/drivers/WB01/assets/icon.svg",
       "images": {
-        "large": "/drivers/WB01/assets/images/large.jpg",
-        "small": "/drivers/WB01/assets/images/small.jpg"
+        "large": "/drivers/WB01/assets/images/large.png",
+        "small": "/drivers/WB01/assets/images/small.png"
       },
       "capabilities": [
         "alarm_battery"
@@ -205,8 +205,8 @@
       "class": "sensor",
       "icon": "/drivers/ms01/assets/icon.svg",
       "images": {
-        "large": "/drivers/ms01/assets/images/large.jpg",
-        "small": "/drivers/ms01/assets/images/small.jpg"
+        "large": "/drivers/ms01/assets/images/large.png",
+        "small": "/drivers/ms01/assets/images/small.png"
       },
       "capabilities": [
         "alarm_motion",

@@ -1,0 +1,437 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "tech.sonoff",
+  "version": "0.0.1",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "name": {
+    "en": "SONOFF Zigbee"
+  },
+  "description": {
+    "en": "SONOFF takes Care of Your 'Home'. Make your lives easier and better with affordable and innovative smart products."
+  },
+  "tag": [
+    "SONOFF",
+    "Zigbee",
+    "Sensor",
+    "Temperature",
+    "Humidity",
+    "Door",
+    "Window",
+    "PIR"
+  ],
+  "category": [
+    "appliances",
+    "security"
+  ],
+  "brandColor": "#3465A8",
+  "permissions": [
+    "homey:wireless:zigbee"
+  ],
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "author": {
+    "name": "Johan Bendz",
+    "email": "johan_bendz@hotmail.com"
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "JohanBendz"
+      }
+    }
+  },
+  "drivers": [
+    {
+      "name": {
+        "en": "Basic ZBR3"
+      },
+      "class": "socket",
+      "icon": "/drivers/BASICZBR3/assets/icon.svg",
+      "images": {
+        "large": "/drivers/BASICZBR3/assets/images/large.jpg",
+        "small": "/drivers/BASICZBR3/assets/images/small.jpg"
+      },
+      "capabilities": [
+        "onoff"
+      ],
+      "energy": {
+        "approximation": {
+          "usageOn": 2300,
+          "usageOff": 1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": "SONOFF",
+        "productId": [
+          "BASICZBR3"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              6
+            ],
+            "bindings": [
+              6
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/BASICZBR3/assets/icon.svg",
+          "instruction": {
+            "en": "Push a pin down the small hole on the side of the device for aprox 8 seconds until the LED blinks rapidly."
+          }
+        }
+      },
+      "id": "BASICZBR3",
+      "settings": []
+    },
+    {
+      "name": {
+        "en": "Door/Window Sensor (SNZB-04)"
+      },
+      "class": "sensor",
+      "icon": "/drivers/DS01/assets/icon.svg",
+      "images": {
+        "large": "/drivers/DS01/assets/images/large.jpg",
+        "small": "/drivers/DS01/assets/images/small.jpg"
+      },
+      "capabilities": [
+        "alarm_contact",
+        "alarm_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "CR2032"
+        ]
+      },
+      "zigbee": {
+        "manufacturerName": "eWeLink",
+        "productId": [
+          "DS01"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              3,
+              1280,
+              1
+            ],
+            "bindings": [
+              1280
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/DS01/assets/icon.svg",
+          "instruction": {
+            "en": "Push a pin down the small hole on the side of the device for aprox 8 seconds until the LED blinks rapidly."
+          }
+        }
+      },
+      "id": "DS01",
+      "settings": []
+    },
+    {
+      "name": {
+        "en": "Temperature and Humidity Sensor (SNZB-02)"
+      },
+      "class": "sensor",
+      "icon": "/drivers/TH01/assets/icon.svg",
+      "images": {
+        "large": "/drivers/TH01/assets/images/large.jpg",
+        "small": "/drivers/TH01/assets/images/small.jpg"
+      },
+      "capabilities": [
+        "measure_temperature",
+        "measure_humidity",
+        "alarm_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "CR2450"
+        ]
+      },
+      "zigbee": {
+        "manufacturerName": "eWeLink",
+        "productId": [
+          "TH01"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              1,
+              3,
+              1026,
+              1029
+            ],
+            "bindings": []
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/TH01/assets/icon.svg",
+          "instruction": {
+            "en": "Push the button on the side of the device for aprox 8 seconds until the LED blinks rapidly."
+          }
+        }
+      },
+      "id": "TH01",
+      "settings": [
+        {
+          "id": "temperature_offset",
+          "type": "number",
+          "label": {
+            "en": "Temperature offset (°C)"
+          },
+          "hint": {
+            "en": "Set a value to compensate a temperature offset.\nRange: -10 - 10, step size 0.1, \ndefault: 0 [°C]"
+          },
+          "value": 0,
+          "attr": {
+            "min": -10,
+            "max": 10,
+            "step": 0.1
+          }
+        },
+        {
+          "id": "temperature_decimals",
+          "type": "radio",
+          "label": {
+            "en": "Temperature reporting decimals"
+          },
+          "value": "1",
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Report temperature value with 1 decimal (21.4 °C)"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Report temperature value with 2 decimals (21.37 °C)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "humidity_offset",
+          "type": "number",
+          "label": {
+            "en": "Humidity offset (%)",
+            "nl": "Luchtvochtigheids compensatie (%)"
+          },
+          "hint": {
+            "en": "Set a correction to compensate a humidity offset.\nRange: -10 - 10, step size 1, \ndefault: 0 [%]",
+            "nl": "Stel een correctiewaarde in om een Luchtvochtigheids verschil te compenseren.\nBereik: -10 - 10, stap grootte 1, \nstandaard: 0 [%]"
+          },
+          "value": 0,
+          "attr": {
+            "min": -10,
+            "max": 10,
+            "step": 1
+          },
+          "units": {
+            "en": "%",
+            "nl": "%"
+          }
+        },
+        {
+          "id": "humidity_decimals",
+          "type": "radio",
+          "label": {
+            "en": "Humidity reporting"
+          },
+          "value": "1",
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Report humidity value with 1 decimal (35.2 %)"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Report humidity value with 2 decimals (35.19 %)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "batteryThreshold",
+          "type": "number",
+          "label": {
+            "en": "Battery Low Alarm Voltage Threshold (percent)"
+          },
+          "hint": {
+            "en": "This setting determines the threshold before a battery alarm is given."
+          },
+          "value": 20,
+          "attr": {
+            "step": 1,
+            "min": 10,
+            "max": 90
+          }
+        }
+      ]
+    },
+    {
+      "name": {
+        "en": "Wireless Switch (SNZB-01)"
+      },
+      "class": "button",
+      "icon": "/drivers/WB01/assets/icon.svg",
+      "images": {
+        "large": "/drivers/WB01/assets/images/large.jpg",
+        "small": "/drivers/WB01/assets/images/small.jpg"
+      },
+      "capabilities": [
+        "alarm_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "CR2450"
+        ]
+      },
+      "zigbee": {
+        "manufacturerName": "eWeLink",
+        "productId": [
+          "WB01"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              1,
+              6
+            ],
+            "bindings": [
+              6
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/WB01/assets/icon.svg",
+          "instruction": {
+            "en": "Open the back of the device and push a pin down the small hole marked RST for aprox 8 seconds until the LED blinks rapidly."
+          }
+        }
+      },
+      "id": "WB01",
+      "settings": [
+        {
+          "id": "batteryThreshold",
+          "type": "number",
+          "label": {
+            "en": "Battery Low Alarm Voltage Threshold (percent)"
+          },
+          "hint": {
+            "en": "This setting determines the threshold before a battery alarm is given."
+          },
+          "value": 10,
+          "attr": {
+            "step": 1,
+            "min": 10,
+            "max": 90
+          }
+        }
+      ]
+    },
+    {
+      "name": {
+        "en": "Motion Sensor (SNZB-03)"
+      },
+      "class": "sensor",
+      "icon": "/drivers/ms01/assets/icon.svg",
+      "images": {
+        "large": "/drivers/ms01/assets/images/large.jpg",
+        "small": "/drivers/ms01/assets/images/small.jpg"
+      },
+      "capabilities": [
+        "alarm_motion",
+        "alarm_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "CR2450"
+        ]
+      },
+      "zigbee": {
+        "manufacturerName": "eWeLink",
+        "productId": [
+          "ms01"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              1,
+              1280
+            ],
+            "bindings": [
+              1280
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/ms01/assets/icon.svg",
+          "instruction": {
+            "en": "Push a pin down the small hole on the side of the device for aprox 8 seconds until the LED blinks rapidly."
+          }
+        }
+      },
+      "id": "ms01",
+      "settings": []
+    }
+  ],
+  "flow": {
+    "triggers": [
+      {
+        "id": "WB01_one_click",
+        "title": {
+          "en": "One click"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=WB01"
+          }
+        ]
+      },
+      {
+        "id": "WB01_two_clicks",
+        "title": {
+          "en": "Two clicks"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=WB01"
+          }
+        ]
+      },
+      {
+        "id": "WB01_hold",
+        "title": {
+          "en": "Long press"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=WB01"
+          }
+        ]
+      }
+    ]
+  }
+}

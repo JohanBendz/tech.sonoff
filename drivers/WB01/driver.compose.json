@@ -1,0 +1,43 @@
+{
+  "name": {
+    "en": "Wireless Switch (SNZB-01)"
+  },
+  "class": "button",
+  "icon": "{{driverAssetsPath}}/icon.svg",
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.jpg",
+    "small": "{{driverAssetsPath}}/images/small.jpg"
+  },
+  "capabilities": [
+    "alarm_battery"
+  ],
+  "energy": {
+    "batteries": [
+      "CR2450"
+    ]
+  },
+  "zigbee": {
+    "manufacturerName": "eWeLink",
+    "productId": [
+      "WB01"
+    ],
+    "endpoints": {
+      "1": {
+        "clusters": [
+          0,
+          1,
+          6
+        ],
+        "bindings": [
+          6
+        ]
+      }
+    },
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/icon.svg",
+      "instruction": {
+        "en": "Open the back of the device and push a pin down the small hole marked RST for aprox 8 seconds until the LED blinks rapidly."
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "tech.sonoff",
+  "version": "0.0.1",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "name": {
+    "en": "SONOFF Zigbee"
+  },
+  "description": {
+    "en": "SONOFF takes Care of Your 'Home'. Make your lives easier and better with affordable and innovative smart products."
+  },
+  "tag": [
+    "SONOFF",
+    "Zigbee",
+    "Sensor",
+    "Temperature",
+    "Humidity",
+    "Door",
+    "Window",
+    "PIR"
+  ],
+  "category": [
+    "appliances",
+    "security"
+  ],
+  "brandColor": "#3465A8",
+  "permissions": [
+    "homey:wireless:zigbee"
+  ],
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "author": {
+    "name": "Johan Bendz",
+    "email": "johan_bendz@hotmail.com"
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "JohanBendz"
+      }
+    }
+  }
+}

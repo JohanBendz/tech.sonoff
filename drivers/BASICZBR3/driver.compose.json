@@ -1,0 +1,43 @@
+{
+  "name": {
+    "en": "Basic ZBR3"
+  },
+  "class": "socket",
+  "icon": "{{driverAssetsPath}}/icon.svg",
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.jpg",
+    "small": "{{driverAssetsPath}}/images/small.jpg"
+  },
+  "capabilities": [
+    "onoff"
+  ],
+  "energy": {
+    "approximation": {
+      "usageOn": 2300,
+      "usageOff": 1
+    }
+  },
+  "zigbee": {
+    "manufacturerName": "SONOFF",
+    "productId": [
+      "BASICZBR3"
+    ],
+    "endpoints": {
+      "1": {
+        "clusters": [
+          0,
+          6
+        ],
+        "bindings": [
+          6
+        ]
+      }
+    },
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/icon.svg",
+      "instruction": {
+        "en": "Push a pin down the small hole on the side of the device for aprox 8 seconds until the LED blinks rapidly."
+      }
+    }
+  }
+}

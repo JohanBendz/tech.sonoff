@@ -1,5 +1,8 @@
 {
     "0.0.1": {
       "en": "First version"
+    },
+    "0.0.2": {
+      "en": "Temp/Humid sensor added"
     }
 }

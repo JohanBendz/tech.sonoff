@@ -12,6 +12,9 @@ class TemperatureAndHumiditySensor extends ZigBeeDevice {
 		debug(true);
     this.printNode();
 
+    if (this.hasCapability('measure_temperature')) this.registerCapability('measure_temperature', CLUSTER.TEMPERATURE_MEASUREMENT);
+    if (this.hasCapability('measure_humidity')) this.registerCapability('measure_humidity', CLUSTER.RELATIVE_HUMIDITY_MEASUREMENT);
+
 		// measure_temperature
 		zclNode.endpoints[1].clusters[CLUSTER.TEMPERATURE_MEASUREMENT.NAME]
 		.on('attr.measuredValue', this.onTemperatureMeasuredAttributeReport.bind(this));
@@ -24,44 +27,6 @@ class TemperatureAndHumiditySensor extends ZigBeeDevice {
 		node.handleFrame = (endpointId, clusterId, frame, meta) => {
       this.log("frame data! endpointId:", endpointId,", clusterId:", clusterId,", frame:", frame, ", meta:", meta);
     }; */
-    
-    // measure_temperature & measure_humidity
-/*       if (this.isFirstInit()){
-        await this.configureAttributeReporting([
-          {
-            endpointId: 1,
-            cluster: CLUSTER.TEMPERATURE_MEASUREMENT,
-            attributeName: 'measuredValue',
-            minInterval: 30,
-            maxInterval: 60,
-            minChange: 1,
-          },
-          {
-            endpointId: 1,
-            cluster: CLUSTER.RELATIVE_HUMIDITY_MEASUREMENT,
-            attributeName: 'measuredValue',
-            minInterval: 30,
-            maxInterval: 60,
-            minChange: 1,
-            }
-        ]);
-      }
-
-      zclNode.endpoints[1].clusters[CLUSTER.TEMPERATURE_MEASUREMENT.NAME]
-      .on('attr.measuredValue', (currentTempValue) => {
-        const temperatureOffset = this.getSetting('temperature_offset') || 0;
-        const parsedValue = this.getSetting('temperature_decimals') === '2' ? Math.round((currentTempValue / 100) * 100) / 100 : Math.round((currentTempValue / 100) * 10) / 10;
-        this.log('measure_temperature | temperatureMeasurement - currentTempValue (temperature):', parsedValue, '+ temperature offset', temperatureOffset);
-        this.setCapabilityValue('measure_temperature', parsedValue + temperatureOffset);
-      });
-
-      zclNode.endpoints[1].clusters[CLUSTER.RELATIVE_HUMIDITY_MEASUREMENT.NAME]
-      .on('attr.measuredValue', (currentHumValue) => {
-        const humidityOffset = this.getSetting('humidity_offset') || 0;
-        const parsedValue = this.getSetting('humidity_decimals') === '2' ? Math.round((currentHumValue / 100) * 100) / 100 : Math.round((currentHumValue / 100) * 10) / 10;
-        this.log('measure_humidity | relativeHumidity - currentHumValue (humidity):', parsedValue, '+ humidity offset', humidityOffset);
-        this.setCapabilityValue('measure_humidity', parsedValue + humidityOffset);
-      }); */
 
 		// measure_battery // alarm_battery
 		zclNode.endpoints[1].clusters[CLUSTER.POWER_CONFIGURATION.NAME]

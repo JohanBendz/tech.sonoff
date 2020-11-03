@@ -4,5 +4,11 @@
     },
     "0.0.2": {
       "en": "Temperature and Humidity Sensor added"
+    },
+    "0.0.3": {
+      "en": "Added better description"
+    },
+    "0.0.4": {
+      "en": "Added more product ID's to devices"
     }
 }

@@ -1,1 +1,1 @@
-SONOFF Takes Care of Your 'Home'. Founded out of a simple need: make your lives easier, smart and better. we’ve the ambition to design and create the most innovative smart products with a simple and affordable way to give you a smarter home.
+SONOFF have the ambition to design and create innovative and affordable smart products to give you a smarter home to a lower cost. The products supported by this app use the Zigbee protocol and can be directly added to Homey without the use of an extra bridge or cloud services.

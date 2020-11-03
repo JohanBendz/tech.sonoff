@@ -20,7 +20,8 @@
   "zigbee": {
     "manufacturerName": "eWeLink",
     "productId": [
-      "ms01"
+      "ms01",
+      "MS01"
     ],
     "endpoints": {
       "1": {

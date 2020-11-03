@@ -1,6 +1,6 @@
 {
   "name": "tech.sonoff",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "main": "app.js",
   "dependencies": {
     "homey": "^2.8.0",

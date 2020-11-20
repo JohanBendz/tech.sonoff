@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "tech.sonoff",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "name": {
@@ -18,7 +18,9 @@
     "Humidity",
     "Door",
     "Window",
-    "PIR"
+    "PIR",
+    "Switch",
+    "Cord"
   ],
   "category": [
     "appliances",
@@ -170,7 +172,11 @@
               1026,
               1029
             ],
-            "bindings": []
+            "bindings": [
+              1,
+              1026,
+              1029
+            ]
           }
         },
         "learnmode": {
@@ -346,6 +352,54 @@
     },
     {
       "name": {
+        "en": "ZBMINI"
+      },
+      "class": "light",
+      "icon": "/drivers/ZBMINI/assets/icon.svg",
+      "images": {
+        "large": "/drivers/ZBMINI/assets/images/large.png",
+        "small": "/drivers/ZBMINI/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff"
+      ],
+      "energy": {
+        "approximation": {
+          "usageOn": 2300,
+          "usageOff": 1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": "SONOFF",
+        "productId": [
+          "01MINIZB"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              3,
+              4,
+              5,
+              6
+            ],
+            "bindings": [
+              6
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/ZBMINI/assets/icon.svg",
+          "instruction": {
+            "en": "Push a pin down the small hole on the side of the device for aprox 8 seconds until the LED blinks rapidly."
+          }
+        }
+      },
+      "id": "ZBMINI",
+      "settings": []
+    },
+    {
+      "name": {
         "en": "Motion Sensor (SNZB-03)"
       },
       "class": "sensor",
@@ -366,7 +420,8 @@
       "zigbee": {
         "manufacturerName": "eWeLink",
         "productId": [
-          "ms01"
+          "ms01",
+          "MS01"
         ],
         "endpoints": {
           "1": {

@@ -1,48 +1,45 @@
 {
   "name": {
-    "en": "Temperature and Humidity Sensor (SNZB-02)"
+    "en": "ZBMINI"
   },
-  "class": "sensor",
+  "class": "light",
   "icon": "{{driverAssetsPath}}/icon.svg",
   "images": {
     "large": "{{driverAssetsPath}}/images/large.png",
     "small": "{{driverAssetsPath}}/images/small.png"
   },
   "capabilities": [
-    "measure_temperature",
-    "measure_humidity",
-    "alarm_battery"
+    "onoff"
   ],
   "energy": {
-    "batteries": [
-      "CR2450"
-    ]
+    "approximation": {
+      "usageOn": 2300,
+      "usageOff": 1
+    }
   },
   "zigbee": {
-    "manufacturerName": "eWeLink",
+    "manufacturerName": "SONOFF",
     "productId": [
-      "TH01"
+      "01MINIZB"
     ],
     "endpoints": {
       "1": {
         "clusters": [
           0,
-          1,
           3,
-          1026,
-          1029
+          4,
+          5,
+          6
         ],
         "bindings": [
-          1,
-          1026,
-          1029
+          6
         ]
       }
     },
     "learnmode": {
       "image": "{{driverAssetsPath}}/icon.svg",
       "instruction": {
-        "en": "Push the button on the side of the device for aprox 8 seconds until the LED blinks rapidly."
+        "en": "Push a pin down the small hole on the side of the device for aprox 8 seconds until the LED blinks rapidly."
       }
     }
   }

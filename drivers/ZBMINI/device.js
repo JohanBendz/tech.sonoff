@@ -4,7 +4,7 @@ const Homey = require('homey');
 const { ZigBeeDevice } = require('homey-zigbeedriver');
 const { CLUSTER } = require('zigbee-clusters');
 
-class BasicSwitch extends ZigBeeDevice {
+class ZBMINI extends ZigBeeDevice {
 	
 	async onNodeInit({ zclNode }) {
 
@@ -18,4 +18,4 @@ class BasicSwitch extends ZigBeeDevice {
 	
 }
 
-module.exports = BasicSwitch;
+module.exports = ZBMINI;

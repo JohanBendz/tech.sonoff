@@ -12,25 +12,51 @@ class TemperatureAndHumiditySensor extends ZigBeeDevice {
 		debug(true);
     this.printNode();
 
-    if (this.hasCapability('measure_temperature')) this.registerCapability('measure_temperature', CLUSTER.TEMPERATURE_MEASUREMENT);
-    if (this.hasCapability('measure_humidity')) this.registerCapability('measure_humidity', CLUSTER.RELATIVE_HUMIDITY_MEASUREMENT);
-
-		// measure_temperature
-		zclNode.endpoints[1].clusters[CLUSTER.TEMPERATURE_MEASUREMENT.NAME]
-		.on('attr.measuredValue', this.onTemperatureMeasuredAttributeReport.bind(this));
-  
-		// measure_humidity
-		zclNode.endpoints[1].clusters[CLUSTER.RELATIVE_HUMIDITY_MEASUREMENT.NAME]
-    .on('attr.measuredValue', this.onRelativeHumidityMeasuredAttributeReport.bind(this));
+    if (this.isFirstInit()){
+      await this.configureAttributeReporting([
+        {
+          endpointId: 1,
+          cluster: CLUSTER.TEMPERATURE_MEASUREMENT,
+          attributeName: 'measuredValue',
+          minInterval: 0,
+          maxInterval: 3600,
+          minChange: 100,
+        },
+        {
+          endpointId: 1,
+          cluster: CLUSTER.RELATIVE_HUMIDITY_MEASUREMENT,
+          attributeName: 'measuredValue',
+          minInterval: 0,
+          maxInterval: 3600,
+          minChange: 25,
+        },
+        {
+        endpointId: 1,
+        cluster: CLUSTER.POWER_CONFIGURATION,
+        attributeName: 'batteryPercentageRemaining',
+        minInterval: 0,
+        maxInterval: 36000,
+        minChange: 100,
+        },
+      ]);
+    };
 
 /*     const node = await this.homey.zigbee.getNode(this);
 		node.handleFrame = (endpointId, clusterId, frame, meta) => {
       this.log("frame data! endpointId:", endpointId,", clusterId:", clusterId,", frame:", frame, ", meta:", meta);
     }; */
 
+		// measure_temperature
+		zclNode.endpoints[1].clusters[CLUSTER.TEMPERATURE_MEASUREMENT.NAME]
+    .on('attr.measuredValue', this.onTemperatureMeasuredAttributeReport.bind(this));
+  
+		// measure_humidity
+		zclNode.endpoints[1].clusters[CLUSTER.RELATIVE_HUMIDITY_MEASUREMENT.NAME]
+    .on('attr.measuredValue', this.onRelativeHumidityMeasuredAttributeReport.bind(this));
+
 		// measure_battery // alarm_battery
 		zclNode.endpoints[1].clusters[CLUSTER.POWER_CONFIGURATION.NAME]
-		.on('attr.batteryPercentageRemaining', this.onBatteryPercentageRemainingAttributeReport.bind(this));
+    .on('attr.batteryPercentageRemaining', this.onBatteryPercentageRemainingAttributeReport.bind(this));
 
 	}
 

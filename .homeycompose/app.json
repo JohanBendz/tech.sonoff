@@ -1,6 +1,6 @@
 {
   "id": "tech.sonoff",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "name": {
@@ -17,7 +17,9 @@
     "Humidity",
     "Door",
     "Window",
-    "PIR"
+    "PIR",
+    "Switch",
+    "Cord"
   ],
   "category": [
     "appliances",

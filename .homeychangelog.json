@@ -10,5 +10,11 @@
     },
     "0.0.4": {
       "en": "Added more product ID's to devices"
+    },
+    "0.0.5": {
+      "en": "Added Smart Switch, ZBMINI"
+    },
+    "0.0.6": {
+      "en": "Patch for Temp/Hum Sensor not updating (unit needs to be removed and paired again)"
     }
 }

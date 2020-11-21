@@ -4,41 +4,53 @@ const Homey = require('homey');
 const { ZigBeeDevice } = require('homey-zigbeedriver');
 const { debug, CLUSTER } = require('zigbee-clusters');
 
-class TemperatureAndHumiditySensor extends ZigBeeDevice {
+var settingsUpdated = false;
 
+class TemperatureAndHumiditySensor extends ZigBeeDevice {
+  
 	async onNodeInit({ zclNode }) {
 
 		this.enableDebug();
 		debug(true);
     this.printNode();
 
-    if (this.isFirstInit()){
+    const temperature_minInterval = this.getSetting('temperature_minInterval') || 0;
+    const temperature_maxInterval = this.getSetting('temperature_maxInterval') || 3600;
+    const temperature_minChange = this.getSetting('temperature_minChange') || 100;
+    const humidity_minInterval = this.getSetting('humidity_minInterval') || 0;
+    const humidity_maxInterval = this.getSetting('humidity_maxInterval') || 3600;
+    const humidity_minChange = this.getSetting('humidity_minChange') || 100;
+
+    if (this.isFirstInit() || settingsUpdated){
       await this.configureAttributeReporting([
         {
           endpointId: 1,
           cluster: CLUSTER.TEMPERATURE_MEASUREMENT,
           attributeName: 'measuredValue',
-          minInterval: 0,
-          maxInterval: 3600,
-          minChange: 100,
+          minInterval: temperature_minInterval,
+          maxInterval: temperature_maxInterval,
+          minChange: temperature_minChange,
         },
         {
           endpointId: 1,
           cluster: CLUSTER.RELATIVE_HUMIDITY_MEASUREMENT,
           attributeName: 'measuredValue',
-          minInterval: 0,
-          maxInterval: 3600,
-          minChange: 25,
+          minInterval: humidity_minInterval,
+          maxInterval: humidity_maxInterval,
+          minChange: humidity_minChange,
         },
         {
         endpointId: 1,
         cluster: CLUSTER.POWER_CONFIGURATION,
         attributeName: 'batteryPercentageRemaining',
-        minInterval: 0,
-        maxInterval: 36000,
-        minChange: 100,
+        minInterval: 3600,
+        maxInterval: 65535,
+        minChange: 2,
         },
       ]);
+
+      settingsUpdated = false;
+
     };
 
 /*     const node = await this.homey.zigbee.getNode(this);
@@ -79,7 +91,11 @@ class TemperatureAndHumiditySensor extends ZigBeeDevice {
 		this.log("measure_battery | powerConfiguration - batteryPercentageRemaining (%): ", batteryPercentageRemaining/2);
 		this.setCapabilityValue('measure_battery', batteryPercentageRemaining/2);
 		this.setCapabilityValue('alarm_battery', (batteryPercentageRemaining/2 < batteryThreshold) ? true : false)
-	}
+  }
+  
+	onSettings(oldSettings, newSettings, changedKeys) {
+    settingsUpdated = true;
+	};
 
 	onDeleted(){
 	this.log("temphumidsensor removed")

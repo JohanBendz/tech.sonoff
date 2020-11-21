@@ -96,6 +96,102 @@
         "min": 10,
         "max": 90
       }
+    },
+    {
+      "id": "temperature_minInterval",
+      "type": "number",
+      "label": {
+        "en": "Temp min interval"
+      },
+      "hint": {
+        "en": "Set a min report interval.\nRange: 0 - 65535, step size 1, \ndefault: 0 [seconds] (Restart the app after changing this value)"
+      },
+      "value": 0,
+      "attr": {
+        "min": 0,
+        "max": 65535,
+        "step": 1
+      }
+    },
+    {
+      "id": "temperature_maxInterval",
+      "type": "number",
+      "label": {
+        "en": "Temp max interval"
+      },
+      "hint": {
+        "en": "Set a max report interval.\nRange: 0 - 65535, step size 1, \ndefault: 3600 [seconds] (Restart the app after changing this value)"
+      },
+      "value": 3600,
+      "attr": {
+        "min": 0,
+        "max": 65535,
+        "step": 1
+      }
+    },
+    {
+      "id": "temperature_minChange",
+      "type": "number",
+      "label": {
+        "en": "Temp min change"
+      },
+      "hint": {
+        "en": "Set a min report change.\nRange: 0 - 1000, step size 1, \ndefault: 100 [1 = 0,01 °C] (Restart the app after changing this value)"
+      },
+      "value": 100,
+      "attr": {
+        "min": 0,
+        "max": 1000,
+        "step": 1
+      }
+    },
+    {
+      "id": "humidity_minInterval",
+      "type": "number",
+      "label": {
+        "en": "Hum min interval"
+      },
+      "hint": {
+        "en": "Set a min report interval.\nRange: 0 - 65535, step size 1, \ndefault: 0 [seconds] (Restart the app after changing this value)"
+      },
+      "value": 0,
+      "attr": {
+        "min": 0,
+        "max": 65535,
+        "step": 1
+      }
+    },
+    {
+      "id": "humidity_maxInterval",
+      "type": "number",
+      "label": {
+        "en": "Hum max interval"
+      },
+      "hint": {
+        "en": "Set a max report interval.\nRange: 0 - 65535, step size 1, \ndefault: 3600 [seconds] (Restart the app after changing this value)"
+      },
+      "value": 3600,
+      "attr": {
+        "min": 0,
+        "max": 65535,
+        "step": 1
+      }
+    },
+    {
+      "id": "humidity_minChange",
+      "type": "number",
+      "label": {
+        "en": "Hum min change"
+      },
+      "hint": {
+        "en": "Set a min report change.\nRange: 0 - 1000, step size 1, \ndefault: 100 [1 = 0.01 %] (Restart the app after changing this value)"
+      },
+      "value": 100,
+      "attr": {
+        "min": 0,
+        "max": 1000,
+        "step": 1
+      }
     }
-  
+      
   ]

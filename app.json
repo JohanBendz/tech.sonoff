@@ -294,7 +294,7 @@
             "en": "Temp min interval"
           },
           "hint": {
-            "en": "Set a min report interval.\nRange: 0 - 65535, step size 1, \ndefault: 0 [seconds]"
+            "en": "Set a min report interval.\nRange: 0 - 65535, step size 1, \ndefault: 0 [seconds] (Restart the app after changing this value)"
           },
           "value": 0,
           "attr": {
@@ -310,7 +310,7 @@
             "en": "Temp max interval"
           },
           "hint": {
-            "en": "Set a max report interval.\nRange: 0 - 65535, step size 1, \ndefault: 3600 [seconds]"
+            "en": "Set a max report interval.\nRange: 0 - 65535, step size 1, \ndefault: 3600 [seconds] (Restart the app after changing this value)"
           },
           "value": 3600,
           "attr": {
@@ -326,7 +326,7 @@
             "en": "Temp min change"
           },
           "hint": {
-            "en": "Set a min report change.\nRange: 0 - 1000, step size 1, \ndefault: 100 [1 = 0,01 °C]"
+            "en": "Set a min report change.\nRange: 0 - 1000, step size 1, \ndefault: 100 [1 = 0,01 °C] (Restart the app after changing this value)"
           },
           "value": 100,
           "attr": {
@@ -342,7 +342,7 @@
             "en": "Hum min interval"
           },
           "hint": {
-            "en": "Set a min report interval.\nRange: 0 - 65535, step size 1, \ndefault: 0 [seconds]"
+            "en": "Set a min report interval.\nRange: 0 - 65535, step size 1, \ndefault: 0 [seconds] (Restart the app after changing this value)"
           },
           "value": 0,
           "attr": {
@@ -358,7 +358,7 @@
             "en": "Hum max interval"
           },
           "hint": {
-            "en": "Set a max report interval.\nRange: 0 - 65535, step size 1, \ndefault: 3600 [seconds]"
+            "en": "Set a max report interval.\nRange: 0 - 65535, step size 1, \ndefault: 3600 [seconds] (Restart the app after changing this value)"
           },
           "value": 3600,
           "attr": {
@@ -374,7 +374,7 @@
             "en": "Hum min change"
           },
           "hint": {
-            "en": "Set a min report change.\nRange: 0 - 1000, step size 1, \ndefault: 100 [1 = 0.01 %]"
+            "en": "Set a min report change.\nRange: 0 - 1000, step size 1, \ndefault: 100 [1 = 0.01 %] (Restart the app after changing this value)"
           },
           "value": 100,
           "attr": {

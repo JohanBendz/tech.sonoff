@@ -16,5 +16,8 @@
     },
     "0.0.6": {
       "en": "Patch for Temp/Hum Sensor not updating (unit needs to be removed and paired again)"
+    },
+    "0.0.7": {
+      "en": "Added settings for Temp/Hum Sensor interval/change"
     }
 }

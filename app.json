@@ -67,12 +67,12 @@
         "productId": [
           "BASICZBR3"
         ],
-        "deviceId": 123,
-        "profileId": 123,
+        "deviceId": 9,
+        "profileId": 260,
         "learnmode": {
           "image": "/drivers/BASICZBR3/assets/icon.svg",
           "instruction": {
-            "en": "Push a pin down the small hole on the side of the device for aprox 8 seconds until the LED blinks rapidly."
+            "en": "Push the button for aprox 8 seconds until the LED blinks rapidly."
           }
         }
       },
@@ -105,8 +105,8 @@
         "productId": [
           "TH01"
         ],
-        "deviceId": 123,
-        "profileId": 123,
+        "deviceId": 770,
+        "profileId": 260,
         "learnmode": {
           "image": "/drivers/TH01/assets/icon.svg",
           "instruction": {
@@ -213,102 +213,6 @@
             "min": 10,
             "max": 90
           }
-        },
-        {
-          "id": "temperature_minInterval",
-          "type": "number",
-          "label": {
-            "en": "Temp min interval"
-          },
-          "hint": {
-            "en": "Set a min report interval.\nRange: 0 - 65535, step size 1, \ndefault: 0 [seconds] (Restart the app after changing this value)"
-          },
-          "value": 0,
-          "attr": {
-            "min": 0,
-            "max": 65535,
-            "step": 1
-          }
-        },
-        {
-          "id": "temperature_maxInterval",
-          "type": "number",
-          "label": {
-            "en": "Temp max interval"
-          },
-          "hint": {
-            "en": "Set a max report interval.\nRange: 0 - 65535, step size 1, \ndefault: 3600 [seconds] 0 = disable periodic reporting, 65535 = no automatic reporting (Restart the app after changing this value)"
-          },
-          "value": 3600,
-          "attr": {
-            "min": 0,
-            "max": 65535,
-            "step": 1
-          }
-        },
-        {
-          "id": "temperature_minChange",
-          "type": "number",
-          "label": {
-            "en": "Temp min change"
-          },
-          "hint": {
-            "en": "Set a min report change.\nRange: 0 - 1000, step size 1, \ndefault: 100 [1 = 0,01 °C] (Restart the app after changing this value)"
-          },
-          "value": 100,
-          "attr": {
-            "min": 0,
-            "max": 1000,
-            "step": 1
-          }
-        },
-        {
-          "id": "humidity_minInterval",
-          "type": "number",
-          "label": {
-            "en": "Hum min interval"
-          },
-          "hint": {
-            "en": "Set a min report interval.\nRange: 0 - 65535, step size 1, \ndefault: 0 [seconds] (Restart the app after changing this value)"
-          },
-          "value": 0,
-          "attr": {
-            "min": 0,
-            "max": 65535,
-            "step": 1
-          }
-        },
-        {
-          "id": "humidity_maxInterval",
-          "type": "number",
-          "label": {
-            "en": "Hum max interval"
-          },
-          "hint": {
-            "en": "Set a max report interval.\nRange: 0 - 65535, step size 1, \ndefault: 3600 [seconds] 0 = disable periodic reporting, 65535 = no automatic reporting (Restart the app after changing this value)"
-          },
-          "value": 3600,
-          "attr": {
-            "min": 0,
-            "max": 65535,
-            "step": 1
-          }
-        },
-        {
-          "id": "humidity_minChange",
-          "type": "number",
-          "label": {
-            "en": "Hum min change"
-          },
-          "hint": {
-            "en": "Set a min report change.\nRange: 0 - 1000, step size 1, \ndefault: 100 [1 = 0.01 %] (Restart the app after changing this value)"
-          },
-          "value": 100,
-          "attr": {
-            "min": 0,
-            "max": 1000,
-            "step": 1
-          }
         }
       ]
     },
@@ -337,7 +241,7 @@
           "01MINIZB"
         ],
         "deviceId": 123,
-        "profileId": 123,
+        "profileId": 260,
         "learnmode": {
           "image": "/drivers/ZBMINI/assets/icon.svg",
           "instruction": {

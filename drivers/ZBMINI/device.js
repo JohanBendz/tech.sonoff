@@ -11,9 +11,12 @@ class ZBMINI extends ZigBeeDevice {
 		this.printNode();
 
 		// Register capabilities and listeners
-		if (this.hasCapability('onoff')) {
-			this.registerCapability('onoff', 'genOnOff');
-		};
+		this.registerCapability('onoff', 'genOnOff', {
+			set: value => value ? 'on' : 'off',
+			setParser: () => ({}),
+			get: 'onOff',
+			reportParser: value => value === 1,
+		});
 
 	}
 	

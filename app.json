@@ -310,7 +310,7 @@
             "en": "Temp max interval"
           },
           "hint": {
-            "en": "Set a max report interval.\nRange: 0 - 65535, step size 1, \ndefault: 3600 [seconds] (Restart the app after changing this value)"
+            "en": "Set a max report interval.\nRange: 0 - 65535, step size 1, \ndefault: 3600 [seconds] 0 = disable periodic reporting, 65535 = no automatic reporting (Restart the app after changing this value)"
           },
           "value": 3600,
           "attr": {
@@ -358,7 +358,7 @@
             "en": "Hum max interval"
           },
           "hint": {
-            "en": "Set a max report interval.\nRange: 0 - 65535, step size 1, \ndefault: 3600 [seconds] (Restart the app after changing this value)"
+            "en": "Set a max report interval.\nRange: 0 - 65535, step size 1, \ndefault: 3600 [seconds] 0 = disable periodic reporting, 65535 = no automatic reporting (Restart the app after changing this value)"
           },
           "value": 3600,
           "attr": {

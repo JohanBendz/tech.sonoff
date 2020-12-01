@@ -22,20 +22,8 @@
     "productId": [
       "01MINIZB"
     ],
-    "endpoints": {
-      "1": {
-        "clusters": [
-          0,
-          3,
-          4,
-          5,
-          6
-        ],
-        "bindings": [
-          6
-        ]
-      }
-    },
+    "deviceId": 123,
+    "profileId": 123,
     "learnmode": {
       "image": "{{driverAssetsPath}}/icon.svg",
       "instruction": {

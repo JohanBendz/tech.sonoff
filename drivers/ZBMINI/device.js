@@ -1,18 +1,19 @@
 'use strict';
 
 const Homey = require('homey');
-const { ZigBeeDevice } = require('homey-zigbeedriver');
-const { CLUSTER } = require('zigbee-clusters');
+const ZigBeeDevice = require("homey-meshdriver").ZigBeeDevice;
 
 class ZBMINI extends ZigBeeDevice {
 	
-	async onNodeInit({ zclNode }) {
+	async onMeshInit() {
 
-        if (this.hasCapability('onoff')) this.registerCapability('onoff', CLUSTER.ON_OFF, {
-			getOpts: {
-				getOnOnline: true,
-			},
-		});
+		this.enableDebug();
+		this.printNode();
+
+		// Register capabilities and listeners
+		if (this.hasCapability('onoff')) {
+			this.registerCapability('onoff', 'genOnOff');
+		};
 
 	}
 	

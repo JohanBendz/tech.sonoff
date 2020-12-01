@@ -19,5 +19,8 @@
     },
     "0.0.7": {
       "en": "Added settings for Temp/Hum Sensor interval/change"
+    },
+    "0.0.8": {
+      "en": "SDK 2 version for App Store, SDK 3 version in /test"
     }
 }

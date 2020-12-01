@@ -4,7 +4,6 @@
   "main": "app.js",
   "dependencies": {
     "homey": "^2.8.0",
-    "homey-zigbeedriver": "^1.6.2",
-    "zigbee-clusters": "^1.4.0"
+    "homey-meshdriver": "^2.0.2"
   }
 }

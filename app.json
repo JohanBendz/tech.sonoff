@@ -3,7 +3,7 @@
   "id": "tech.sonoff",
   "version": "0.0.8",
   "compatibility": ">=4.2.0",
-  "sdk": 3,
+  "sdk": 2,
   "name": {
     "en": "SONOFF Zigbee"
   },
@@ -16,9 +16,6 @@
     "Sensor",
     "Temperature",
     "Humidity",
-    "Door",
-    "Window",
-    "PIR",
     "Switch",
     "Cord"
   ],
@@ -70,17 +67,8 @@
         "productId": [
           "BASICZBR3"
         ],
-        "endpoints": {
-          "1": {
-            "clusters": [
-              0,
-              6
-            ],
-            "bindings": [
-              6
-            ]
-          }
-        },
+        "deviceId": 123,
+        "profileId": 123,
         "learnmode": {
           "image": "/drivers/BASICZBR3/assets/icon.svg",
           "instruction": {
@@ -89,53 +77,6 @@
         }
       },
       "id": "BASICZBR3",
-      "settings": []
-    },
-    {
-      "name": {
-        "en": "Door/Window Sensor (SNZB-04)"
-      },
-      "class": "sensor",
-      "icon": "/drivers/DS01/assets/icon.svg",
-      "images": {
-        "large": "/drivers/DS01/assets/images/large.png",
-        "small": "/drivers/DS01/assets/images/small.png"
-      },
-      "capabilities": [
-        "alarm_contact",
-        "alarm_battery"
-      ],
-      "energy": {
-        "batteries": [
-          "CR2032"
-        ]
-      },
-      "zigbee": {
-        "manufacturerName": "eWeLink",
-        "productId": [
-          "DS01"
-        ],
-        "endpoints": {
-          "1": {
-            "clusters": [
-              0,
-              3,
-              1280,
-              1
-            ],
-            "bindings": [
-              1280
-            ]
-          }
-        },
-        "learnmode": {
-          "image": "/drivers/DS01/assets/icon.svg",
-          "instruction": {
-            "en": "Push a pin down the small hole on the side of the device for aprox 8 seconds until the LED blinks rapidly."
-          }
-        }
-      },
-      "id": "DS01",
       "settings": []
     },
     {
@@ -164,22 +105,8 @@
         "productId": [
           "TH01"
         ],
-        "endpoints": {
-          "1": {
-            "clusters": [
-              0,
-              1,
-              3,
-              1026,
-              1029
-            ],
-            "bindings": [
-              1,
-              1026,
-              1029
-            ]
-          }
-        },
+        "deviceId": 123,
+        "profileId": 123,
         "learnmode": {
           "image": "/drivers/TH01/assets/icon.svg",
           "instruction": {
@@ -387,68 +314,6 @@
     },
     {
       "name": {
-        "en": "Wireless Switch (SNZB-01)"
-      },
-      "class": "button",
-      "icon": "/drivers/WB01/assets/icon.svg",
-      "images": {
-        "large": "/drivers/WB01/assets/images/large.png",
-        "small": "/drivers/WB01/assets/images/small.png"
-      },
-      "capabilities": [
-        "alarm_battery"
-      ],
-      "energy": {
-        "batteries": [
-          "CR2450"
-        ]
-      },
-      "zigbee": {
-        "manufacturerName": "eWeLink",
-        "productId": [
-          "WB01"
-        ],
-        "endpoints": {
-          "1": {
-            "clusters": [
-              0,
-              1,
-              6
-            ],
-            "bindings": [
-              6
-            ]
-          }
-        },
-        "learnmode": {
-          "image": "/drivers/WB01/assets/icon.svg",
-          "instruction": {
-            "en": "Open the back of the device and push a pin down the small hole marked RST for aprox 8 seconds until the LED blinks rapidly."
-          }
-        }
-      },
-      "id": "WB01",
-      "settings": [
-        {
-          "id": "batteryThreshold",
-          "type": "number",
-          "label": {
-            "en": "Battery Low Alarm Voltage Threshold (percent)"
-          },
-          "hint": {
-            "en": "This setting determines the threshold before a battery alarm is given."
-          },
-          "value": 10,
-          "attr": {
-            "step": 1,
-            "min": 10,
-            "max": 90
-          }
-        }
-      ]
-    },
-    {
-      "name": {
         "en": "ZBMINI"
       },
       "class": "light",
@@ -471,20 +336,8 @@
         "productId": [
           "01MINIZB"
         ],
-        "endpoints": {
-          "1": {
-            "clusters": [
-              0,
-              3,
-              4,
-              5,
-              6
-            ],
-            "bindings": [
-              6
-            ]
-          }
-        },
+        "deviceId": 123,
+        "profileId": 123,
         "learnmode": {
           "image": "/drivers/ZBMINI/assets/icon.svg",
           "instruction": {
@@ -494,96 +347,6 @@
       },
       "id": "ZBMINI",
       "settings": []
-    },
-    {
-      "name": {
-        "en": "Motion Sensor (SNZB-03)"
-      },
-      "class": "sensor",
-      "icon": "/drivers/ms01/assets/icon.svg",
-      "images": {
-        "large": "/drivers/ms01/assets/images/large.png",
-        "small": "/drivers/ms01/assets/images/small.png"
-      },
-      "capabilities": [
-        "alarm_motion",
-        "alarm_battery"
-      ],
-      "energy": {
-        "batteries": [
-          "CR2450"
-        ]
-      },
-      "zigbee": {
-        "manufacturerName": "eWeLink",
-        "productId": [
-          "ms01",
-          "MS01"
-        ],
-        "endpoints": {
-          "1": {
-            "clusters": [
-              0,
-              1,
-              1280
-            ],
-            "bindings": [
-              1280
-            ]
-          }
-        },
-        "learnmode": {
-          "image": "/drivers/ms01/assets/icon.svg",
-          "instruction": {
-            "en": "Push a pin down the small hole on the side of the device for aprox 8 seconds until the LED blinks rapidly."
-          }
-        }
-      },
-      "id": "ms01",
-      "settings": []
     }
-  ],
-  "flow": {
-    "triggers": [
-      {
-        "id": "WB01_one_click",
-        "title": {
-          "en": "One click"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=WB01"
-          }
-        ]
-      },
-      {
-        "id": "WB01_two_clicks",
-        "title": {
-          "en": "Two clicks"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=WB01"
-          }
-        ]
-      },
-      {
-        "id": "WB01_hold",
-        "title": {
-          "en": "Long press"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=WB01"
-          }
-        ]
-      }
-    ]
-  }
+  ]
 }

@@ -22,7 +22,7 @@
     "productId": [
       "01MINIZB"
     ],
-    "deviceId": 123,
+    "deviceId": 256,
     "profileId": 260,
     "learnmode": {
       "image": "{{driverAssetsPath}}/icon.svg",

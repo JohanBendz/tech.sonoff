@@ -36,7 +36,7 @@
     "learnmode": {
       "image": "{{driverAssetsPath}}/icon.svg",
       "instruction": {
-        "en": "Push a pin down the small hole on the side of the device for aprox 8 seconds until the LED blinks rapidly."
+        "en": "Push the button for aprox 8 seconds until the LED blinks rapidly."
       }
     }
   }

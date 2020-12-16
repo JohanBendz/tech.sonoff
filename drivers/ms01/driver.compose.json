@@ -21,7 +21,8 @@
     "manufacturerName": "eWeLink",
     "productId": [
       "ms01",
-      "MS01"
+      "MS01",
+      "66666"
     ],
     "endpoints": {
       "1": {

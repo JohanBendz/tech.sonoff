@@ -1,6 +1,6 @@
 {
   "id": "tech.sonoff",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "name": {
@@ -19,7 +19,10 @@
     "Window",
     "PIR",
     "Switch",
-    "Cord"
+    "Cord",
+    "1 gang",
+    "wall",
+    "switch"
   ],
   "category": [
     "appliances",

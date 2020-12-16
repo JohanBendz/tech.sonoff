@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "tech.sonoff",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "name": {
@@ -20,7 +20,10 @@
     "Window",
     "PIR",
     "Switch",
-    "Cord"
+    "Cord",
+    "1 gang",
+    "wall",
+    "switch"
   ],
   "category": [
     "appliances",
@@ -496,6 +499,54 @@
       "settings": []
     },
     {
+      "id": "ZBSW01",
+      "name": {
+        "en": "1 Gang Wall Switch"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff"
+      ],
+      "images": {
+        "large": "/drivers/ZBSW01/assets/images/large.png",
+        "small": "/drivers/ZBSW01/assets/images/small.png"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 0,
+          "usageOff": 0
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "eWeLink"
+        ],
+        "productId": [
+          "ZB-SW01"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              4,
+              5,
+              6
+            ],
+            "bindings": [
+              6
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/ZBSW01/assets/icon.svg",
+          "instruction": {
+            "en": "Press the button for 10 seconds (the LED should start blinking)."
+          }
+        }
+      },
+      "settings": []
+    },
+    {
       "name": {
         "en": "Motion Sensor (SNZB-03)"
       },
@@ -518,7 +569,8 @@
         "manufacturerName": "eWeLink",
         "productId": [
           "ms01",
-          "MS01"
+          "MS01",
+          "66666"
         ],
         "endpoints": {
           "1": {

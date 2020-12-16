@@ -8,5 +8,6 @@ Supported devices:
 - Cord switch - Basic ZBR3
 - Temperature and Humidity Sensor - SNZB-02 / TH01
 - Smart Switch - ZBMINI / 01MINIZB
+- 1 Gang Wall Switch / ZB-SW01
 
 To request additional devices, please use Athom Homey Community Forum.

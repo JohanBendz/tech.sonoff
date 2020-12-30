@@ -28,5 +28,8 @@
     },
     "0.0.10": {
       "en": "Added 1 Gang Wall Switch (white label)"
+    },
+    "0.0.11": {
+      "en": "Added OnOff Controller (white label)"
     }
 }

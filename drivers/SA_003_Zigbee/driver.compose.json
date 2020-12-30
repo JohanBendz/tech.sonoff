@@ -1,0 +1,43 @@
+{
+  "name": {
+    "en": "eWeLink OnOff module"
+  },
+  "class": "socket",
+  "icon": "{{driverAssetsPath}}/icon.svg",
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "capabilities": [
+    "onoff"
+  ],
+  "energy": {
+    "approximation": {
+      "usageOn": 2300,
+      "usageOff": 1
+    }
+  },
+  "zigbee": {
+    "manufacturerName": "eWeLink",
+    "productId": [
+      "SA-003-Zigbee"
+    ],
+    "endpoints": {
+      "1": {
+        "clusters": [
+          0,
+          6
+        ],
+        "bindings": [
+          6
+        ]
+      }
+    },
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/icon.svg",
+      "instruction": {
+        "en": "Push the reset button for aprox 8-10 seconds until the LED blinks rapidly, if needed repeat 5 times."
+      }
+    }
+  }
+}

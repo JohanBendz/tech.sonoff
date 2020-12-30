@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "tech.sonoff",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "name": {
@@ -12,6 +12,7 @@
   },
   "tag": [
     "SONOFF",
+    "eWeLink",
     "Zigbee",
     "Sensor",
     "Temperature",
@@ -22,8 +23,8 @@
     "Switch",
     "Cord",
     "1 gang",
-    "wall",
-    "switch"
+    "Wall",
+    "Controller"
   ],
   "category": [
     "appliances",
@@ -139,6 +140,51 @@
         }
       },
       "id": "DS01",
+      "settings": []
+    },
+    {
+      "name": {
+        "en": "eWeLink OnOff module"
+      },
+      "class": "socket",
+      "icon": "/drivers/SA_003_Zigbee/assets/icon.svg",
+      "images": {
+        "large": "/drivers/SA_003_Zigbee/assets/images/large.png",
+        "small": "/drivers/SA_003_Zigbee/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff"
+      ],
+      "energy": {
+        "approximation": {
+          "usageOn": 2300,
+          "usageOff": 1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": "eWeLink",
+        "productId": [
+          "SA-003-Zigbee"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              6
+            ],
+            "bindings": [
+              6
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/SA_003_Zigbee/assets/icon.svg",
+          "instruction": {
+            "en": "Push the reset button for aprox 8-10 seconds until the LED blinks rapidly, if needed repeat 5 times."
+          }
+        }
+      },
+      "id": "SA_003_Zigbee",
       "settings": []
     },
     {

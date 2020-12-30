@@ -9,5 +9,6 @@ Supported devices:
 - Temperature and Humidity Sensor - SNZB-02 / TH01
 - Smart Switch - ZBMINI / 01MINIZB
 - 1 Gang Wall Switch / ZB-SW01
+- OnOff Controller / SA-003-Zigbee
 
 To request additional devices, please use Athom Homey Community Forum.

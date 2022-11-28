@@ -1,1 +1,22 @@
-[]
+[
+    {
+    "type": "group",
+    "label": {
+        "en": "Expert settings"
+    },
+    "collapsed": true,
+    "children": [
+        {
+        "id": "reverse_contact_alarm",
+        "type": "checkbox",
+        "value": false,
+        "label": {
+            "en": "Reverse the contact alarm logic"
+        },
+        "hint": {
+            "en": "Reverse the contact alarm logic: magnet closed = alarm activated, magnet opened = alarm deactivated."
+        }
+        }
+    ]
+    }
+]

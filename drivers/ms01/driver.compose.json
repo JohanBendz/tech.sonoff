@@ -3,6 +3,8 @@
     "en": "Motion Sensor (SNZB-03)"
   },
   "class": "sensor",
+  "platforms": ["local", "cloud"],
+  "connectivity": ["zigbee"],
   "icon": "{{driverAssetsPath}}/icon.svg",
   "images": {
     "large": "{{driverAssetsPath}}/images/large.png",
@@ -22,6 +24,7 @@
     "productId": [
       "ms01",
       "MS01",
+      "MSO1",
       "66666"
     ],
     "endpoints": {

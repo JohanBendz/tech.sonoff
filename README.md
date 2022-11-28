@@ -3,7 +3,7 @@ Adds support for SONOFF Zigbee devices
 
 Supported devices:
 - Windows / Door Sensor - SNZB-04 / DS01
-- Motion Sensor - SNZB-03 / ms01, MS01
+- Motion Sensor - SNZB-03 / ms01, MS01, MSO1
 - Wireless Switch - SNZB-01 / WB01
 - Cord switch - Basic ZBR3
 - Temperature and Humidity Sensor - SNZB-02 / TH01
@@ -12,5 +12,7 @@ Supported devices:
 - 2 Gang Wall Switch / ZB-SW02
 - 3 Gang Wall Switch / ZB-SW03
 - OnOff Controller / SA-003-Zigbee
+- Plug - SONOFF-ZB-S26 / S26R2ZB
+- Smart Switch - ZBMINI-L
 
 To request additional devices, please use Athom Homey Community Forum.

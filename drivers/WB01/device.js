@@ -5,7 +5,7 @@ const { ZigBeeDevice } = require('homey-zigbeedriver');
 const { debug, CLUSTER } = require('zigbee-clusters');
 const OnOffBoundCluster = require('../../lib/OnOffBoundCluster');
 
-class MotionSensor extends ZigBeeDevice {
+class WirelessSwitch extends ZigBeeDevice {
 	
 	async onNodeInit({ zclNode }) {
 
@@ -66,4 +66,4 @@ class MotionSensor extends ZigBeeDevice {
 
 }
 
-module.exports = MotionSensor;
+module.exports = WirelessSwitch;

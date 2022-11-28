@@ -34,5 +34,14 @@
     },
     "0.0.12": {
       "en": "Added 2 Gang Wall Switch and 3 Gang Wall Switch (white label)"
+    },
+    "0.0.20": {
+      "en": "Patch for ZBMini (and other wired devices) not reporting device offline. Adding ProdictId variants to Motion Sensor (SNZB-03)."
+    },
+    "0.0.21": {
+      "en": "Beautifying the code..."
+    },
+    "0.0.22": {
+      "en": "Added Plug S26 and switch module ZBMini-L. Added reverse logic to door/window sensor. Made the app compatible with the Bridge."
     }
 }

@@ -1,8 +1,8 @@
 {
   "name": {
-    "en": "ZBMINI"
+    "en": "ZB S26"
   },
-  "class": "light",
+  "class": "socket",
   "platforms": ["local", "cloud"],
   "connectivity": ["zigbee"],
   "icon": "{{driverAssetsPath}}/icon.svg",
@@ -22,15 +22,12 @@
   "zigbee": {
     "manufacturerName": "SONOFF",
     "productId": [
-      "01MINIZB"
+      "S26R2ZB"
     ],
     "endpoints": {
       "1": {
         "clusters": [
           0,
-          3,
-          4,
-          5,
           6
         ],
         "bindings": [

@@ -1,13 +1,13 @@
 {
   "id": "tech.sonoff",
-  "version": "0.0.12",
+  "version": "0.0.22",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "name": {
     "en": "SONOFF Zigbee"
   },
   "description": {
-    "en": "SONOFF takes Care of Your 'Home'. Make your lives easier and better with affordable and innovative smart products."
+    "en": "SONOFF - Takes care of your home."
   },
   "tag": [
     "SONOFF",
@@ -47,5 +47,17 @@
         "username": "JohanBendz"
       }
     }
-  }
+  },
+  "platforms": [
+    "local",
+    "cloud"
+  ],
+  "support": "mailto:homey@bortbytt.se",
+  "tags": {
+    "en": [
+      ""
+    ]
+  },
+  "homeyCommunityTopicId": 36418,
+  "homepage": "https://www.bortbytt.se"
 }

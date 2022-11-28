@@ -8,9 +8,9 @@ class SA_003_Zigbee extends ZigBeeDevice {
 	async onNodeInit({ zclNode }) {
 
         if (this.hasCapability('onoff')) this.registerCapability('onoff', CLUSTER.ON_OFF, {
-			getOpts: {
+/* 			getOpts: {
 				getOnOnline: true,
-			},
+			}, */
 		});
 
 	}

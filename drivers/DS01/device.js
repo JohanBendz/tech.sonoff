@@ -12,22 +12,28 @@ class doorwindowsensor extends ZigBeeDevice {
 		debug(true);
     this.printNode(); */
     
-/*     const node = await this.homey.zigbee.getNode(this);
+/*
+    const node = await this.homey.zigbee.getNode(this);
 		node.handleFrame = (endpointId, clusterId, frame, meta) => {
-      this.log("frame data! endpointId:", endpointId,", clusterId:", clusterId,", frame:", frame, ", meta:", meta);
-    }; */
+        this.log("endpointId:", endpointId,", clusterId:", clusterId,", frame:", frame, ", meta:", meta);
+        this.log("Frame JSON data:", frame.toJSON());
+    };
+    
+*/
 
 		// alarm_contact
-      zclNode.endpoints[1].clusters[CLUSTER.IAS_ZONE.NAME].onZoneStatusChangeNotification = payload => {
-        this.onIASZoneStatusChangeNotification(payload);
-      }
+    zclNode.endpoints[1].clusters[CLUSTER.IAS_ZONE.NAME].onZoneStatusChangeNotification = payload => {
+      this.onIASZoneStatusChangeNotification(payload);
+    }
 
   }
   
   onIASZoneStatusChangeNotification({zoneStatus, extendedStatus, zoneId, delay,}) {
     this.log('IASZoneStatusChangeNotification received:', zoneStatus, extendedStatus, zoneId, delay);
-    this.setCapabilityValue('alarm_contact', zoneStatus.alarm1);
-    this.setCapabilityValue('alarm_battery', zoneStatus.battery);
+    const reverseAlarmLogic = this.getSetting('reverse_contact_alarm') || false;
+    const parsedData = !reverseAlarmLogic ? zoneStatus.alarm1 === true : zoneStatus.alarm1 === false;
+    this.setCapabilityValue('alarm_contact', parsedData).catch(this.error);
+    this.setCapabilityValue('alarm_battery', zoneStatus.battery).catch(this.error);
   }
 
 	onDeleted(){

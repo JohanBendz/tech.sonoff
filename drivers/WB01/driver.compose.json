@@ -3,6 +3,8 @@
     "en": "Wireless Switch (SNZB-01)"
   },
   "class": "button",
+  "platforms": ["local", "cloud"],
+  "connectivity": ["zigbee"],
   "icon": "{{driverAssetsPath}}/icon.svg",
   "images": {
     "large": "{{driverAssetsPath}}/images/large.png",

@@ -9,9 +9,6 @@ class ZBMINI extends ZigBeeDevice {
 	async onNodeInit({ zclNode }) {
 
         if (this.hasCapability('onoff')) this.registerCapability('onoff', CLUSTER.ON_OFF, {
-			getOpts: {
-				getOnOnline: true,
-			},
 		});
 
 	}

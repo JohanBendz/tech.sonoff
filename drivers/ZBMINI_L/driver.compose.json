@@ -1,6 +1,6 @@
 {
   "name": {
-    "en": "ZBMINI"
+    "en": "ZBMINI-L"
   },
   "class": "light",
   "platforms": ["local", "cloud"],
@@ -22,7 +22,7 @@
   "zigbee": {
     "manufacturerName": "SONOFF",
     "productId": [
-      "01MINIZB"
+      "ZBMINI-L"
     ],
     "endpoints": {
       "1": {

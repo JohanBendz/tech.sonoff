@@ -1,14 +1,14 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "tech.sonoff",
-  "version": "0.0.12",
+  "version": "0.0.22",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "name": {
     "en": "SONOFF Zigbee"
   },
   "description": {
-    "en": "SONOFF takes Care of Your 'Home'. Make your lives easier and better with affordable and innovative smart products."
+    "en": "SONOFF - Takes care of your home."
   },
   "tag": [
     "SONOFF",
@@ -49,12 +49,31 @@
       }
     }
   },
+  "platforms": [
+    "local",
+    "cloud"
+  ],
+  "support": "mailto:homey@bortbytt.se",
+  "tags": {
+    "en": [
+      ""
+    ]
+  },
+  "homeyCommunityTopicId": 36418,
+  "homepage": "https://www.bortbytt.se",
   "drivers": [
     {
       "name": {
         "en": "Basic ZBR3"
       },
       "class": "socket",
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "icon": "/drivers/BASICZBR3/assets/icon.svg",
       "images": {
         "large": "/drivers/BASICZBR3/assets/images/large.png",
@@ -100,6 +119,13 @@
         "en": "Door/Window Sensor (SNZB-04)"
       },
       "class": "sensor",
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "icon": "/drivers/DS01/assets/icon.svg",
       "images": {
         "large": "/drivers/DS01/assets/images/large.png",
@@ -140,13 +166,41 @@
         }
       },
       "id": "DS01",
-      "settings": []
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Expert settings"
+          },
+          "collapsed": true,
+          "children": [
+            {
+              "id": "reverse_contact_alarm",
+              "type": "checkbox",
+              "value": false,
+              "label": {
+                "en": "Reverse the contact alarm logic"
+              },
+              "hint": {
+                "en": "Reverse the contact alarm logic: magnet closed = alarm activated, magnet opened = alarm deactivated."
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "name": {
         "en": "eWeLink OnOff module"
       },
       "class": "socket",
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "icon": "/drivers/SA_003_Zigbee/assets/icon.svg",
       "images": {
         "large": "/drivers/SA_003_Zigbee/assets/images/large.png",
@@ -192,6 +246,13 @@
         "en": "Temperature and Humidity Sensor (SNZB-02)"
       },
       "class": "sensor",
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "icon": "/drivers/TH01/assets/icon.svg",
       "images": {
         "large": "/drivers/TH01/assets/images/large.png",
@@ -439,6 +500,13 @@
         "en": "Wireless Switch (SNZB-01)"
       },
       "class": "button",
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "icon": "/drivers/WB01/assets/icon.svg",
       "images": {
         "large": "/drivers/WB01/assets/images/large.png",
@@ -501,6 +569,13 @@
         "en": "ZBMINI"
       },
       "class": "light",
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "icon": "/drivers/ZBMINI/assets/icon.svg",
       "images": {
         "large": "/drivers/ZBMINI/assets/images/large.png",
@@ -545,11 +620,73 @@
       "settings": []
     },
     {
+      "name": {
+        "en": "ZBMINI-L"
+      },
+      "class": "light",
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "icon": "/drivers/ZBMINI_L/assets/icon.svg",
+      "images": {
+        "large": "/drivers/ZBMINI_L/assets/images/large.png",
+        "small": "/drivers/ZBMINI_L/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff"
+      ],
+      "energy": {
+        "approximation": {
+          "usageOn": 2300,
+          "usageOff": 1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": "SONOFF",
+        "productId": [
+          "ZBMINI-L"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              3,
+              4,
+              5,
+              6
+            ],
+            "bindings": [
+              6
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/ZBMINI_L/assets/icon.svg",
+          "instruction": {
+            "en": "Push the button for aprox 8 seconds until the LED blinks rapidly."
+          }
+        }
+      },
+      "id": "ZBMINI_L",
+      "settings": []
+    },
+    {
       "id": "ZBSW01",
       "name": {
         "en": "1 Gang Wall Switch"
       },
       "class": "light",
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "capabilities": [
         "onoff"
       ],
@@ -598,6 +735,13 @@
         "en": "2 Gang Wall Switch"
       },
       "class": "light",
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "capabilities": [
         "onoff"
       ],
@@ -669,6 +813,13 @@
         "en": "3 Gang Wall Switch"
       },
       "class": "light",
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "capabilities": [
         "onoff"
       ],
@@ -759,9 +910,68 @@
     },
     {
       "name": {
+        "en": "ZB S26"
+      },
+      "class": "socket",
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "icon": "/drivers/ZB_S26/assets/icon.svg",
+      "images": {
+        "large": "/drivers/ZB_S26/assets/images/large.png",
+        "small": "/drivers/ZB_S26/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff"
+      ],
+      "energy": {
+        "approximation": {
+          "usageOn": 2300,
+          "usageOff": 1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": "SONOFF",
+        "productId": [
+          "S26R2ZB"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              6
+            ],
+            "bindings": [
+              6
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/ZB_S26/assets/icon.svg",
+          "instruction": {
+            "en": "Push the button for aprox 8 seconds until the LED blinks rapidly."
+          }
+        }
+      },
+      "id": "ZB_S26",
+      "settings": []
+    },
+    {
+      "name": {
         "en": "Motion Sensor (SNZB-03)"
       },
       "class": "sensor",
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "icon": "/drivers/ms01/assets/icon.svg",
       "images": {
         "large": "/drivers/ms01/assets/images/large.png",
@@ -781,6 +991,7 @@
         "productId": [
           "ms01",
           "MS01",
+          "MSO1",
           "66666"
         ],
         "endpoints": {

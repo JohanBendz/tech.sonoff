@@ -4,7 +4,7 @@
       "en": "2 Gang Wall Switch"
     },
     "class": "light",
-    "platforms": ["local", "cloud"],
+    "platforms": ["local"],
     "connectivity": ["zigbee"],
     "capabilities": [
       "onoff"

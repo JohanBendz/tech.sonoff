@@ -8,7 +8,7 @@
     "en": "SONOFF Zigbee"
   },
   "description": {
-    "en": "SONOFF - Takes care of your home."
+    "en": "Make your lives easier and better with affordable and innovative smart products."
   },
   "tag": [
     "SONOFF",
@@ -50,8 +50,7 @@
     }
   },
   "platforms": [
-    "local",
-    "cloud"
+    "local"
   ],
   "support": "mailto:homey@bortbytt.se",
   "tags": {
@@ -68,8 +67,7 @@
       },
       "class": "socket",
       "platforms": [
-        "local",
-        "cloud"
+        "local"
       ],
       "connectivity": [
         "zigbee"
@@ -120,8 +118,7 @@
       },
       "class": "sensor",
       "platforms": [
-        "local",
-        "cloud"
+        "local"
       ],
       "connectivity": [
         "zigbee"
@@ -195,8 +192,7 @@
       },
       "class": "socket",
       "platforms": [
-        "local",
-        "cloud"
+        "local"
       ],
       "connectivity": [
         "zigbee"
@@ -247,8 +243,7 @@
       },
       "class": "sensor",
       "platforms": [
-        "local",
-        "cloud"
+        "local"
       ],
       "connectivity": [
         "zigbee"
@@ -501,8 +496,7 @@
       },
       "class": "button",
       "platforms": [
-        "local",
-        "cloud"
+        "local"
       ],
       "connectivity": [
         "zigbee"
@@ -570,8 +564,7 @@
       },
       "class": "light",
       "platforms": [
-        "local",
-        "cloud"
+        "local"
       ],
       "connectivity": [
         "zigbee"
@@ -625,8 +618,7 @@
       },
       "class": "light",
       "platforms": [
-        "local",
-        "cloud"
+        "local"
       ],
       "connectivity": [
         "zigbee"
@@ -681,8 +673,7 @@
       },
       "class": "light",
       "platforms": [
-        "local",
-        "cloud"
+        "local"
       ],
       "connectivity": [
         "zigbee"
@@ -736,8 +727,7 @@
       },
       "class": "light",
       "platforms": [
-        "local",
-        "cloud"
+        "local"
       ],
       "connectivity": [
         "zigbee"
@@ -814,8 +804,7 @@
       },
       "class": "light",
       "platforms": [
-        "local",
-        "cloud"
+        "local"
       ],
       "connectivity": [
         "zigbee"
@@ -914,8 +903,7 @@
       },
       "class": "socket",
       "platforms": [
-        "local",
-        "cloud"
+        "local"
       ],
       "connectivity": [
         "zigbee"
@@ -966,8 +954,7 @@
       },
       "class": "sensor",
       "platforms": [
-        "local",
-        "cloud"
+        "local"
       ],
       "connectivity": [
         "zigbee"

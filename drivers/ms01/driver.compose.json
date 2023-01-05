@@ -3,7 +3,7 @@
     "en": "Motion Sensor (SNZB-03)"
   },
   "class": "sensor",
-  "platforms": ["local", "cloud"],
+  "platforms": ["local"],
   "connectivity": ["zigbee"],
   "icon": "{{driverAssetsPath}}/icon.svg",
   "images": {

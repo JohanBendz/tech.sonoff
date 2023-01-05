@@ -3,7 +3,7 @@
     "en": "ZB S26"
   },
   "class": "socket",
-  "platforms": ["local", "cloud"],
+  "platforms": ["local"],
   "connectivity": ["zigbee"],
   "icon": "{{driverAssetsPath}}/icon.svg",
   "images": {

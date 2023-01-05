@@ -7,7 +7,7 @@
     "en": "SONOFF Zigbee"
   },
   "description": {
-    "en": "SONOFF - Takes care of your home."
+    "en": "Make your lives easier and better with affordable and innovative smart products."
   },
   "tag": [
     "SONOFF",
@@ -49,8 +49,7 @@
     }
   },
   "platforms": [
-    "local",
-    "cloud"
+    "local"
   ],
   "support": "mailto:homey@bortbytt.se",
   "tags": {

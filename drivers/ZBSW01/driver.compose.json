@@ -4,7 +4,7 @@
       "en": "1 Gang Wall Switch"
     },
     "class": "light",
-    "platforms": ["local", "cloud"],
+    "platforms": ["local"],
     "connectivity": ["zigbee"],
     "capabilities": [
       "onoff"

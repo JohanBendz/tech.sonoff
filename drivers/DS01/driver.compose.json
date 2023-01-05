@@ -3,7 +3,7 @@
     "en": "Door/Window Sensor (SNZB-04)"
   },
   "class": "sensor",
-  "platforms": ["local", "cloud"],
+  "platforms": ["local"],
   "connectivity": ["zigbee"],
   "icon": "{{driverAssetsPath}}/icon.svg",
   "images": {

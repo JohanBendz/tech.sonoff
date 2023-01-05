@@ -42,6 +42,6 @@
       "en": "Beautifying the code..."
     },
     "0.0.22": {
-      "en": "Added Plug S26 and switch module ZBMini-L. Added reverse logic to door/window sensor. Made the app compatible with the Bridge."
+      "en": "Added Plug S26 and switch module ZBMini-L. Added reverse logic to door/window sensor."
     }
 }

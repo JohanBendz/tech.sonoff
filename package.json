@@ -1,6 +1,6 @@
 {
   "name": "tech.sonoff",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "main": "app.js",
   "dependencies": {
     "homey-zigbeedriver": "^1.6.12",

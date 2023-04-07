@@ -4,9 +4,9 @@ const Homey = require('homey');
 const { ZigBeeDevice } = require('homey-zigbeedriver');
 const { debug, CLUSTER } = require('zigbee-clusters');
 
-class LCDTemperatureAndHumiditySensor extends ZigBeeDevice {
+var settingsUpdated = false;
 
-  settingsUpdated = false;
+class LCDTemperatureAndHumiditySensor extends ZigBeeDevice {
   
 	async onNodeInit({ zclNode }) {
 

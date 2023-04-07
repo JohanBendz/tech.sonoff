@@ -43,5 +43,8 @@
     },
     "0.0.22": {
       "en": "Added Plug S26 and switch module ZBMini-L. Added reverse logic to door/window sensor."
+    },
+    "0.0.23": {
+      "en": "Added SNZB-02D - temp/humidity sensor with LCD screen."
     }
 }

@@ -14,5 +14,6 @@ Supported devices:
 - OnOff Controller / SA-003-Zigbee
 - Plug - SONOFF-ZB-S26 / S26R2ZB
 - Smart Switch - ZBMINI-L
+- Temperature and Humidity sensor with LCD screen - SNZB-02D
 
 To request additional devices, please use Athom Homey Community Forum.

@@ -4,8 +4,6 @@ const Homey = require('homey');
 const { ZigBeeDevice } = require('homey-zigbeedriver');
 const { debug, CLUSTER } = require('zigbee-clusters');
 
-var settingsUpdated = false;
-
 class LCDTemperatureAndHumiditySensor extends ZigBeeDevice {
   
 	async onNodeInit({ zclNode }) {
@@ -14,44 +12,39 @@ class LCDTemperatureAndHumiditySensor extends ZigBeeDevice {
 		debug(true);
     this.printNode();
 
-    const temperature_minInterval = this.getSetting('temperature_minInterval') || 0;
-    const temperature_maxInterval = this.getSetting('temperature_maxInterval') || 3600;
-    const temperature_minChange = this.getSetting('temperature_minChange') || 100;
-    const humidity_minInterval = this.getSetting('humidity_minInterval') || 0;
-    const humidity_maxInterval = this.getSetting('humidity_maxInterval') || 3600;
-    const humidity_minChange = this.getSetting('humidity_minChange') || 100;
+    this.temperature_minInterval = this.getSetting('temperature_minInterval') || 0;
+    this.temperature_maxInterval = this.getSetting('temperature_maxInterval') || 3600;
+    this.temperature_minChange = this.getSetting('temperature_minChange') || 100;
+    this.humidity_minInterval = this.getSetting('humidity_minInterval') || 0;
+    this.humidity_maxInterval = this.getSetting('humidity_maxInterval') || 3600;
+    this.humidity_minChange = this.getSetting('humidity_minChange') || 100;
 
-    if (this.isFirstInit() || settingsUpdated){
       await this.configureAttributeReporting([
         {
           endpointId: 1,
           cluster: CLUSTER.TEMPERATURE_MEASUREMENT,
           attributeName: 'measuredValue',
-          minInterval: temperature_minInterval,
-          maxInterval: temperature_maxInterval,
-          minChange: temperature_minChange,
+          minInterval: this.temperature_minInterval,
+          maxInterval: this.temperature_maxInterval,
+          minChange: this.temperature_minChange
         },
         {
           endpointId: 1,
           cluster: CLUSTER.RELATIVE_HUMIDITY_MEASUREMENT,
           attributeName: 'measuredValue',
-          minInterval: humidity_minInterval,
-          maxInterval: humidity_maxInterval,
-          minChange: humidity_minChange,
+          minInterval: this.humidity_minInterval,
+          maxInterval: this.humidity_maxInterval,
+          minChange: this.humidity_minChange
         },
         {
-        endpointId: 1,
-        cluster: CLUSTER.POWER_CONFIGURATION,
-        attributeName: 'batteryPercentageRemaining',
-        minInterval: 3600,
-        maxInterval: 65535,
-        minChange: 2,
-        },
+          endpointId: 1,
+          cluster: CLUSTER.POWER_CONFIGURATION,
+          attributeName: 'batteryPercentageRemaining',
+          minInterval: 3600,
+          maxInterval: 65535,
+          minChange: 2
+        }
       ]);
-
-      settingsUpdated = false;
-
-    };
 
 		// measure_temperature
 		zclNode.endpoints[1].clusters[CLUSTER.TEMPERATURE_MEASUREMENT.NAME]
@@ -88,9 +81,46 @@ class LCDTemperatureAndHumiditySensor extends ZigBeeDevice {
 		this.setCapabilityValue('alarm_battery', (batteryPercentageRemaining/2 < batteryThreshold) ? true : false)
   }
   
-	onSettings(oldSettings, newSettings, changedKeys) {
-    settingsUpdated = true;
-	};
+  onSettings(oldSettings, newSettings, changedKeys) {
+    this.setStoreValue('settingsChanged', true);
+  };
+ 
+  async onEndDeviceAnnounce() {
+    const settingsChanged = this.getStoreValue('settingsChanged');
+    if (settingsChanged) {
+      try {
+        await this.configureAttributeReporting([
+          {
+            endpointId: 1,
+            cluster: CLUSTER.TEMPERATURE_MEASUREMENT,
+            attributeName: 'measuredValue',
+            minInterval: this.temperature_minInterval,
+            maxInterval: this.temperature_maxInterval,
+            minChange: this.temperature_minChange
+          },
+          {
+            endpointId: 1,
+            cluster: CLUSTER.RELATIVE_HUMIDITY_MEASUREMENT,
+            attributeName: 'measuredValue',
+            minInterval: this.humidity_minInterval,
+            maxInterval: this.humidity_maxInterval,
+            minChange: this.humidity_minChange
+          },
+          {
+            endpointId: 1,
+            cluster: CLUSTER.POWER_CONFIGURATION,
+            attributeName: 'batteryPercentageRemaining',
+            minInterval: 3600,
+            maxInterval: 65535,
+            minChange: 2
+          }
+        ]);
+      } catch (error) {
+        this.log("There was a problem configuring attribute reporting");
+      }
+      this.setStoreValue('settingsChanged', false); // Reset the flag
+    }
+  }
 
 	onDeleted(){
 	this.log("LCD temperature and humidity sensor removed")

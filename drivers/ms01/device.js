@@ -8,9 +8,9 @@ class MotionSensor extends ZigBeeDevice {
 	
 	async onNodeInit({ zclNode }) {
 
-/* 		this.enableDebug();
+ 		this.enableDebug();
 		debug(true);
-		this.printNode(); */
+		this.printNode();
 
 /* 		const node = await this.homey.zigbee.getNode(this);
 		node.handleFrame = (endpointId, clusterId, frame, meta) => {

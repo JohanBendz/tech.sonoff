@@ -6,7 +6,7 @@ Supported devices:
 - Motion Sensor - SNZB-03 / ms01, MS01, MSO1
 - Wireless Switch - SNZB-01 / WB01
 - Cord switch - Basic ZBR3
-- Temperature and Humidity Sensor - SNZB-02 / TH01
+- Temperature and Humidity Sensor - SNZB-02P / SNZB-02 (TH01)
 - Smart Switch - ZBMINI / 01MINIZB
 - 1 Gang Wall Switch / ZB-SW01
 - 2 Gang Wall Switch / ZB-SW02

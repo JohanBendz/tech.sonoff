@@ -3,7 +3,7 @@
     "name": {
       "en": "3 Gang Wall Switch"
     },
-    "class": "light",
+    "class": "socket",
     "platforms": ["local"],
     "connectivity": ["zigbee"],
     "capabilities": [
@@ -42,7 +42,7 @@
       },
       "devices": {
         "secondSwitch": {
-          "class": "light",
+          "class": "socket",
           "capabilities": ["onoff"],
           "name": {
             "en": "3 Gang Wall Switch"
@@ -55,7 +55,7 @@
           }
         },
         "thirdSwitch": {
-          "class": "light",
+          "class": "socket",
           "capabilities": ["onoff"],
           "name": {
             "en": "3 Gang Wall Switch"

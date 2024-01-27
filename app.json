@@ -815,7 +815,7 @@
       "name": {
         "en": "ZBMINI"
       },
-      "class": "light",
+      "class": "socket",
       "platforms": [
         "local"
       ],
@@ -869,7 +869,7 @@
       "name": {
         "en": "ZBMINIL2"
       },
-      "class": "light",
+      "class": "socket",
       "platforms": [
         "local"
       ],
@@ -921,7 +921,7 @@
       "name": {
         "en": "ZBMINI-L"
       },
-      "class": "light",
+      "class": "socket",
       "platforms": [
         "local"
       ],
@@ -976,7 +976,7 @@
       "name": {
         "en": "1 Gang Wall Switch"
       },
-      "class": "light",
+      "class": "socket",
       "platforms": [
         "local"
       ],
@@ -1030,7 +1030,7 @@
       "name": {
         "en": "2 Gang Wall Switch"
       },
-      "class": "light",
+      "class": "socket",
       "platforms": [
         "local"
       ],
@@ -1078,7 +1078,7 @@
         },
         "devices": {
           "secondSwitch": {
-            "class": "light",
+            "class": "socket",
             "capabilities": [
               "onoff"
             ],
@@ -1107,7 +1107,7 @@
       "name": {
         "en": "3 Gang Wall Switch"
       },
-      "class": "light",
+      "class": "socket",
       "platforms": [
         "local"
       ],
@@ -1163,7 +1163,7 @@
         },
         "devices": {
           "secondSwitch": {
-            "class": "light",
+            "class": "socket",
             "capabilities": [
               "onoff"
             ],
@@ -1178,7 +1178,7 @@
             }
           },
           "thirdSwitch": {
-            "class": "light",
+            "class": "socket",
             "capabilities": [
               "onoff"
             ],

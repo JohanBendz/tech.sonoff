@@ -1,9 +1,9 @@
 {
   "name": "tech.sonoff",
-  "version": "0.0.24",
+  "version": "0.0.25",
   "main": "app.js",
   "dependencies": {
-    "homey-zigbeedriver": "^1.6.12",
-    "zigbee-clusters": "^1.5.2"
+    "homey-zigbeedriver": "^2.1.1",
+    "zigbee-clusters": "^2.2.2"
   }
 }

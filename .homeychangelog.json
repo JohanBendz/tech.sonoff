@@ -49,5 +49,8 @@
     },
     "0.0.24": {
       "en": "Typo fixed. Added SNZB-02D and ZBMINIL2"
+    },
+    "0.0.25": {
+      "en": "Added SNZB-02P and made a change from light to socket class as default for light devices"
     }
 }

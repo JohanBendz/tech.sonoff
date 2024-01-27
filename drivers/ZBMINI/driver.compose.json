@@ -2,7 +2,7 @@
   "name": {
     "en": "ZBMINI"
   },
-  "class": "light",
+  "class": "socket",
   "platforms": ["local"],
   "connectivity": ["zigbee"],
   "icon": "{{driverAssetsPath}}/icon.svg",

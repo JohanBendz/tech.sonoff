@@ -4,7 +4,7 @@ const Homey = require('homey');
 const { ZigBeeDevice } = require('homey-zigbeedriver');
 const { debug, CLUSTER } = require('zigbee-clusters');
 
-class TemperatureAndHumiditySensor extends ZigBeeDevice {
+class TemperatureAndHumiditySensor2 extends ZigBeeDevice {
   
 	async onNodeInit({ zclNode }) {
 
@@ -133,101 +133,4 @@ class TemperatureAndHumiditySensor extends ZigBeeDevice {
 
 }
 
-module.exports = TemperatureAndHumiditySensor;
-  
-/*   "ids": {
-    "modelId": "TH01",
-    "manufacturerName": "eWeLink"
-  },
-  "endpoints": {
-    "endpointDescriptors": [
-      {
-        "endpointId": 1,
-        "applicationProfileId": 260,
-        "applicationDeviceId": 770,
-        "applicationDeviceVersion": 0,
-        "_reserved1": 0,
-        "inputClusters": [
-          0,
-          3,
-          1026,
-          1029,
-          1
-        ],
-        "outputClusters": [
-          3
-        ]
-      }
-    ],
-    "endpoints": {
-      "1": {
-        "clusters": {
-          "basic": {
-            "attributes": "UNSUP_GENERAL_COMMAND",
-            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
-            "commandsReceived": "UNSUP_GENERAL_COMMAND"
-          },
-          "identify": {},
-          "temperatureMeasurement": {},
-          "relativeHumidity": {},
-          "powerConfiguration": {}
-        },
-        "bindings": {
-          "identify": {}
-        }
-      }
-    }
-  } */
-
-
-  
-/*   "ids": {
-    "modelId": "TH01",
-    "manufacturerName": "eWeLink"
-  },
-  "endpoints": {
-    "endpointDescriptors": [
-      {
-        "endpointId": 1,
-        "applicationProfileId": 260,
-        "applicationDeviceId": 770,
-        "applicationDeviceVersion": 0,
-        "_reserved1": 0,
-        "inputClusters": [
-          0,
-          3,
-          1026,
-          1029,
-          1
-        ],
-        "outputClusters": [
-          3
-        ]
-      }
-    ],
-    "endpoints": {
-      "1": {
-        "clusters": {
-          "basic": {},
-          "identify": {},
-          "temperatureMeasurement": {
-            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
-            "commandsReceived": "UNSUP_GENERAL_COMMAND"
-          },
-          "relativeHumidity": {
-            "attributes": "UNSUP_GENERAL_COMMAND",
-            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
-            "commandsReceived": "UNSUP_GENERAL_COMMAND"
-          },
-          "powerConfiguration": {
-            "attributes": "UNSUP_GENERAL_COMMAND",
-            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
-            "commandsReceived": "UNSUP_GENERAL_COMMAND"
-          }
-        },
-        "bindings": {
-          "identify": {}
-        }
-      }
-    }
-  } */
+module.exports = TemperatureAndHumiditySensor2;

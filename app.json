@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "tech.sonoff",
-  "version": "0.0.24",
+  "version": "0.0.25",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "name": {
@@ -59,6 +59,10 @@
     ]
   },
   "homeyCommunityTopicId": 36418,
+  "source": "https://github.com/JohanBendz/tech.sonoff",
+  "bugs": {
+    "url": "https://github.com/JohanBendz/tech.sonoff/issues"
+  },
   "homepage": "https://www.bortbytt.se",
   "drivers": [
     {
@@ -293,6 +297,259 @@
         }
       },
       "id": "SNZB-02D",
+      "settings": [
+        {
+          "id": "temperature_offset",
+          "type": "number",
+          "label": {
+            "en": "Temperature offset (°C)"
+          },
+          "hint": {
+            "en": "Set a value to compensate a temperature offset.\nRange: -10 - 10, step size 0.1, \ndefault: 0 [°C]"
+          },
+          "value": 0,
+          "attr": {
+            "min": -10,
+            "max": 10,
+            "step": 0.1
+          }
+        },
+        {
+          "id": "temperature_decimals",
+          "type": "radio",
+          "label": {
+            "en": "Temperature reporting decimals"
+          },
+          "value": "1",
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Report temperature value with 1 decimal (21.4 °C)"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Report temperature value with 2 decimals (21.37 °C)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "humidity_offset",
+          "type": "number",
+          "label": {
+            "en": "Humidity offset (%)",
+            "nl": "Luchtvochtigheids compensatie (%)"
+          },
+          "hint": {
+            "en": "Set a correction to compensate a humidity offset.\nRange: -10 - 10, step size 1, \ndefault: 0 [%]",
+            "nl": "Stel een correctiewaarde in om een Luchtvochtigheids verschil te compenseren.\nBereik: -10 - 10, stap grootte 1, \nstandaard: 0 [%]"
+          },
+          "value": 0,
+          "attr": {
+            "min": -10,
+            "max": 10,
+            "step": 1
+          },
+          "units": {
+            "en": "%",
+            "nl": "%"
+          }
+        },
+        {
+          "id": "humidity_decimals",
+          "type": "radio",
+          "label": {
+            "en": "Humidity reporting"
+          },
+          "value": "1",
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Report humidity value with 1 decimal (35.2 %)"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Report humidity value with 2 decimals (35.19 %)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "batteryThreshold",
+          "type": "number",
+          "label": {
+            "en": "Battery Low Alarm Voltage Threshold (percent)"
+          },
+          "hint": {
+            "en": "This setting determines the threshold before a battery alarm is given."
+          },
+          "value": 20,
+          "attr": {
+            "step": 1,
+            "min": 10,
+            "max": 90
+          }
+        },
+        {
+          "id": "temperature_minInterval",
+          "type": "number",
+          "label": {
+            "en": "Temp min interval"
+          },
+          "hint": {
+            "en": "Set a min report interval.\nRange: 0 - 65535, step size 1, \ndefault: 0 [seconds] (Restart the app after changing this value)"
+          },
+          "value": 0,
+          "attr": {
+            "min": 0,
+            "max": 65535,
+            "step": 1
+          }
+        },
+        {
+          "id": "temperature_maxInterval",
+          "type": "number",
+          "label": {
+            "en": "Temp max interval"
+          },
+          "hint": {
+            "en": "Set a max report interval.\nRange: 0 - 65535, step size 1, \ndefault: 3600 [seconds] 0 = disable periodic reporting, 65535 = no automatic reporting (Restart the app after changing this value)"
+          },
+          "value": 3600,
+          "attr": {
+            "min": 0,
+            "max": 65535,
+            "step": 1
+          }
+        },
+        {
+          "id": "temperature_minChange",
+          "type": "number",
+          "label": {
+            "en": "Temp min change"
+          },
+          "hint": {
+            "en": "Set a min report change.\nRange: 0 - 1000, step size 1, \ndefault: 100 [1 = 0,01 °C] (Restart the app after changing this value)"
+          },
+          "value": 100,
+          "attr": {
+            "min": 0,
+            "max": 1000,
+            "step": 1
+          }
+        },
+        {
+          "id": "humidity_minInterval",
+          "type": "number",
+          "label": {
+            "en": "Hum min interval"
+          },
+          "hint": {
+            "en": "Set a min report interval.\nRange: 0 - 65535, step size 1, \ndefault: 0 [seconds] (Restart the app after changing this value)"
+          },
+          "value": 0,
+          "attr": {
+            "min": 0,
+            "max": 65535,
+            "step": 1
+          }
+        },
+        {
+          "id": "humidity_maxInterval",
+          "type": "number",
+          "label": {
+            "en": "Hum max interval"
+          },
+          "hint": {
+            "en": "Set a max report interval.\nRange: 0 - 65535, step size 1, \ndefault: 3600 [seconds] 0 = disable periodic reporting, 65535 = no automatic reporting (Restart the app after changing this value)"
+          },
+          "value": 3600,
+          "attr": {
+            "min": 0,
+            "max": 65535,
+            "step": 1
+          }
+        },
+        {
+          "id": "humidity_minChange",
+          "type": "number",
+          "label": {
+            "en": "Hum min change"
+          },
+          "hint": {
+            "en": "Set a min report change.\nRange: 0 - 1000, step size 1, \ndefault: 100 [1 = 0.01 %] (Restart the app after changing this value)"
+          },
+          "value": 100,
+          "attr": {
+            "min": 0,
+            "max": 1000,
+            "step": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": {
+        "en": "Temperature and Humidity Sensor (SNZB-02P)"
+      },
+      "class": "sensor",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "icon": "/drivers/SNZB-02P/assets/icon.svg",
+      "images": {
+        "large": "/drivers/SNZB-02P/assets/images/large.png",
+        "small": "/drivers/SNZB-02P/assets/images/small.png"
+      },
+      "capabilities": [
+        "measure_temperature",
+        "measure_humidity",
+        "measure_battery",
+        "alarm_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "CR2477"
+        ]
+      },
+      "zigbee": {
+        "manufacturerName": "eWeLink",
+        "productId": [
+          "SNZB-02P"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              1,
+              3,
+              1026,
+              1029
+            ],
+            "bindings": [
+              1,
+              1026,
+              1029
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/SNZB-02P/assets/icon.svg",
+          "instruction": {
+            "en": "Push the button on the side of the device for aprox 8 seconds until the LED blinks rapidly."
+          }
+        }
+      },
+      "id": "SNZB-02P",
       "settings": [
         {
           "id": "temperature_offset",

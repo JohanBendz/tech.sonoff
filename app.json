@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "tech.sonoff",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "name": {
@@ -1157,10 +1157,12 @@
             "clusters": [
               0,
               3,
-              6
+              6,
+              7
             ],
             "bindings": [
-              6
+              6,
+              7
             ]
           }
         },
@@ -1172,7 +1174,69 @@
         }
       },
       "id": "ZBMINIL2",
-      "settings": []
+      "settings": [
+        {
+          "id": "switch_type",
+          "type": "label",
+          "label": {
+            "en": "Switch type"
+          },
+          "value": "toggle",
+          "values": [
+            {
+              "id": "toggle",
+              "label": {
+                "en": "Toggle"
+              }
+            },
+            {
+              "id": "momentary",
+              "label": {
+                "en": "Momentary"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "name": {

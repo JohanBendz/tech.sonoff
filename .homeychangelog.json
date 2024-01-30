@@ -55,5 +55,8 @@
     },
     "0.0.26": {
       "en": "Fix, sensors not reporting / timing out"
+    },
+    "0.0.27": {
+      "en": "Added functionality to ZBMINI-L2"
     }
 }

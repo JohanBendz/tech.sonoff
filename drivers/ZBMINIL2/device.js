@@ -2,7 +2,7 @@
 
 const Homey = require('homey');
 const { ZigBeeDevice } = require('homey-zigbeedriver');
-const { CLUSTER } = require('zigbee-clusters');
+const { Cluster, CLUSTER } = require('zigbee-clusters');
 
 // Power On Behaviour and Switch Type need these
 const SonoffSpecificOnOffCluster = require('../lib/SonoffSpecificOnOffCluster');

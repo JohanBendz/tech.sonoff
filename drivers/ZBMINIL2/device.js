@@ -6,9 +6,9 @@ const { Cluster, CLUSTER } = require('zigbee-clusters');
 
 // Power On Behaviour and Switch Type need these
 const SonoffSpecificOnOffCluster = require('../../lib/SonoffSpecificOnOffCluster');
-const SonoffOnOffSwitchCluster = require("../../lib/SonoffOnOffSwitchCluster");
+const SonoffSpecificOnOffSwitchCluster = require("../../lib/SonoffSpecificOnOffSwitchCluster");
 Cluster.addCluster(SonoffSpecificOnOffCluster);
-Cluster.addCluster(SonoffOnOffSwitchCluster);
+Cluster.addCluster(SonoffSpecificOnOffSwitchCluster);
 
 class ZBMINIL2 extends ZigBeeDevice {
 	

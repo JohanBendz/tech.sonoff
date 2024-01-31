@@ -16,5 +16,6 @@ Supported devices:
 - Smart Switch - ZBMINI-L
 - Temperature and Humidity sensor with LCD screen - SNZB-02D
 - Smart Switch - ZBMINIL2
+- Ultrasonic Sensor - SNZB-06P
 
-To request additional devices, please use Athom Homey Community Forum.
+To request additional devices, please use Athom Homey Community Forum or the Github repository.

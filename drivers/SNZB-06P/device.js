@@ -1,12 +1,13 @@
 'use strict';
 
 const { ZigBeeDevice } = require('homey-zigbeedriver');
-const { Cluster, CLUSTER } = require('zigbee-clusters');
+const { debug, Cluster, CLUSTER } = require('zigbee-clusters');
 
 class SensorSNZB06P extends ZigBeeDevice {
 
     async onNodeInit({ zclNode }) {
 
+		debug(true);
         this.printNode();
 
         if (this.isFirstInit()) {

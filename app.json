@@ -243,6 +243,74 @@
     },
     {
       "name": {
+        "en": "Wireless Button (SNZB-01P)"
+      },
+      "class": "button",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "icon": "/drivers/SNZB-01P/assets/icon.svg",
+      "images": {
+        "large": "/drivers/SNZB-01P/assets/images/large.png",
+        "small": "/drivers/SNZB-01P/assets/images/small.png"
+      },
+      "capabilities": [
+        "alarm_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "CR2477"
+        ]
+      },
+      "zigbee": {
+        "manufacturerName": "eWeLink",
+        "productId": [
+          "SNZB-01P"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              1,
+              6
+            ],
+            "bindings": [
+              6
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/SNZB-01P/assets/icon.svg",
+          "instruction": {
+            "en": "Press the button on the side of the device for aprox 10 seconds until the LED blinks rapidly."
+          }
+        }
+      },
+      "id": "SNZB-01P",
+      "settings": [
+        {
+          "id": "batteryThreshold",
+          "type": "number",
+          "label": {
+            "en": "Battery Low Alarm Voltage Threshold (percent)"
+          },
+          "hint": {
+            "en": "This setting determines the threshold before a battery alarm is given."
+          },
+          "value": 10,
+          "attr": {
+            "step": 1,
+            "min": 10,
+            "max": 90
+          }
+        }
+      ]
+    },
+    {
+      "name": {
         "en": "LCD Temperature and Humidity Sensor (SNZB-02D)"
       },
       "class": "sensor",
@@ -765,8 +833,7 @@
       },
       "capabilities": [
         "alarm_motion",
-        "alarm_contact",
-        "alarm_tamper"
+        "alarm_contact"
       ],
       "energy": {
         "approximation": {
@@ -1689,6 +1756,45 @@
   ],
   "flow": {
     "triggers": [
+      {
+        "id": "SNZB-01P_one_click",
+        "title": {
+          "en": "One click"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01P"
+          }
+        ]
+      },
+      {
+        "id": "SNZB-01P_two_clicks",
+        "title": {
+          "en": "Two clicks"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01P"
+          }
+        ]
+      },
+      {
+        "id": "SNZB-01P_hold",
+        "title": {
+          "en": "Long press"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-01P"
+          }
+        ]
+      },
       {
         "id": "WB01_one_click",
         "title": {

@@ -1,8 +1,8 @@
 {
   "name": {
-    "en": "Ultrasonic Occupancy Sensor (SNZB-06P)"
+    "en": "Wireless Button (SNZB-01P)"
   },
-  "class": "sensor",
+  "class": "button",
   "platforms": ["local"],
   "connectivity": ["zigbee"],
   "icon": "{{driverAssetsPath}}/icon.svg",
@@ -11,40 +11,34 @@
     "small": "{{driverAssetsPath}}/images/small.png"
   },
   "capabilities": [
-    "alarm_motion",
-    "alarm_contact"
+    "alarm_battery"
   ],
   "energy": {
-    "approximation": {
-      "usageOn": 0,
-      "usageOff": 0
-    }
+    "batteries": [
+      "CR2477"
+    ]
   },
   "zigbee": {
-    "manufacturerName": "SONOFF",
+    "manufacturerName": "eWeLink",
     "productId": [
-      "SNZB-06P"
+      "SNZB-01P"
     ],
     "endpoints": {
       "1": {
         "clusters": [
           0,
           1,
-          3,
-          1030,
-          1280
+          6
         ],
         "bindings": [
-          1,
-          1030,
-          1280
+          6
         ]
       }
     },
     "learnmode": {
-      "image": "{{driverAssetsPath}}/learn.svg",
+      "image": "{{driverAssetsPath}}/icon.svg",
       "instruction": {
-        "en": "Press and hold the button on the device for approximately 5 seconds until the LED blinks, indicating it's in pairing mode."
+        "en": "Press the button on the side of the device for aprox 10 seconds until the LED blinks rapidly."
       }
     }
   }

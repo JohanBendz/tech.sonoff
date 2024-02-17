@@ -17,5 +17,6 @@ Supported devices:
 - Temperature and Humidity sensor with LCD screen - SNZB-02D
 - Smart Switch - ZBMINIL2
 - Ultrasonic Sensor - SNZB-06P
+- Wireless Button - SNZB-01P
 
 To request additional devices, please use Athom Homey Community Forum or the Github repository.

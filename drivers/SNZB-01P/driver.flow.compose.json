@@ -1,0 +1,22 @@
+{
+  "triggers": [
+    {
+      "id": "SNZB-01P_one_click",
+      "title": {
+        "en": "One click"
+      }
+    },
+    {
+      "id": "SNZB-01P_two_clicks",
+      "title": {
+        "en": "Two clicks"
+      }
+    },
+    {
+      "id": "SNZB-01P_hold",
+      "title": {
+        "en": "Long press"
+      }
+    }
+  ]
+}

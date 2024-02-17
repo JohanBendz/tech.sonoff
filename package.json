@@ -1,9 +1,15 @@
 {
   "name": "tech.sonoff",
-  "version": "0.0.30",
+  "version": "0.0.31",
   "main": "app.js",
   "dependencies": {
     "homey-zigbeedriver": "^2.1.1",
     "zigbee-clusters": "^2.2.2"
-  }
+  },
+  "keywords": [
+    "Sonoff",
+    "Zigbee"
+  ],
+  "author": "Johan Bendz",
+  "license": "MIT"
 }

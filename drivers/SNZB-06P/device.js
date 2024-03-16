@@ -15,20 +15,14 @@ class SensorSNZB06P extends ZigBeeDevice {
                 {
                     endpointId: 1,
                     cluster: CLUSTER.OCCUPANCY_SENSING,
-                    attributeName: 'occupancy',
-                    minInterval: 65535,
-                    maxInterval: 0,
-                    minChange: 0,
+                    attributeName: 'occupancy'
                 },
                 {
                     endpointId: 1,
                     cluster: CLUSTER.IAS_ZONE,
-                    attributeName: 'zoneStatus',
-                    minInterval: 65535,
-                    maxInterval: 0,
-                    minChange: 0,
+                    attributeName: 'zoneStatus'
                 }
-            ]);
+            ]).catch(this.error);
         }
 
         // Occupancy
@@ -45,13 +39,13 @@ class SensorSNZB06P extends ZigBeeDevice {
 
     onOccupancyAttributeReport(occupancy) {
         this.log("Occupancy status:", occupancy);
-        this.setCapabilityValue('alarm_motion', occupancy)
+        this.setCapabilityValue('alarm_contact', occupancy)
         .catch(err => this.error('Error: could not set alarm_motion capability value', err));
     }
 
     onIASZoneStatusChangeNotification({zoneStatus, extendedStatus, zoneId, delay,}) {
         this.log('IASZoneStatusChangeNotification received:', zoneStatus, extendedStatus, zoneId, delay);
-        this.setCapabilityValue('alarm_contact', zoneStatus.alarm1).catch(this.error)
+        this.setCapabilityValue('alarm_motion', zoneStatus.alarm1)
         .catch(err => this.error('Error: could not set alarm_contact capability value', err));
       }
 

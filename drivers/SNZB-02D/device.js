@@ -8,8 +8,10 @@ class LCDTemperatureAndHumiditySensor extends ZigBeeDevice {
   
   async onNodeInit({ zclNode }) {
 
-    this.enableDebug();
-    debug(true);
+    //this.enableDebug();
+    //debug(true);
+    this.disableDebug();
+    debug(false);
     this.printNode();
 
     this.temperature_minInterval = this.getSetting('temperature_minInterval') !== null ? this.getSetting('temperature_minInterval') : 0;

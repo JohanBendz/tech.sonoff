@@ -11,16 +11,19 @@ Cluster.addCluster(SonoffSpecificOnOffCluster);
 Cluster.addCluster(SonoffSpecificOnOffSwitchCluster);
 
 class ZBMINIL2 extends ZigBeeDevice {
-	
-	async onNodeInit({ zclNode }) {
+    
+    async onNodeInit({ zclNode }) {
 
         if (this.hasCapability('onoff')) this.registerCapability('onoff', CLUSTER.ON_OFF, {
-		});
+        });
 
-	}
+    }
 
-	async onSettings({ oldSettings, newSettings, changedKeys }) {
-       
+    async onSettings(settingsEvent) {
+
+        const newSettings = settingsEvent.newSettings;
+        const changedKeys = settingsEvent.changedKeys;
+
         if (changedKeys.includes('powerOnCtrl_state')) {
             try {
                 const powerOnCtrlstate = await this.zclNode.endpoints[1].clusters.onOff.readAttributes('powerOnCtrl');
@@ -42,7 +45,7 @@ class ZBMINIL2 extends ZigBeeDevice {
         };
 
     }
-	
+
 }
 
 module.exports = ZBMINIL2;

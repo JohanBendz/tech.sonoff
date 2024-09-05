@@ -45,7 +45,13 @@ class doorwindowsensor extends ZigBeeDevice {
 module.exports = doorwindowsensor;
 
 
-/* "ids": {
+/*
+New version:
+"modelId": "SNZB-04",
+"manufacturerName": "eWeLink"
+
+Old version:
+"ids": {
   "modelId": "DS01",
   "manufacturerName": "eWeLink"
 },

@@ -18,5 +18,6 @@ Supported devices:
 - Smart Switch - ZBMINIL2
 - Ultrasonic Sensor - SNZB-06P
 - Wireless Button - SNZB-01P
+- Micro Zigbee USB Smart Adaptor - ZBMicro
 
 To request additional devices, please use Athom Homey Community Forum or the Github repository.

@@ -76,5 +76,8 @@
     },
     "0.0.33": {
       "en": "Fix for SNZB-06P and added ability to set timer for the reset of the contact alarm capability"
+    },
+    "0.0.34": {
+      "en": "Added SNZB-04 and ZBMicro"
     }
 }

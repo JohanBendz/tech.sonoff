@@ -79,5 +79,8 @@
     },
     "0.0.34": {
       "en": "Added SNZB-04 and ZBMicro"
+    },
+    "0.0.35": {
+      "en": "Improvements to attributeReportingConfig and fix to saving settings for TH01/SNZB-02/SNZB-02D/SNZB-02P/ZBMINI-L"
     }
 }

@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "tech.sonoff",
-  "version": "0.0.34",
+  "version": "0.0.35",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "name": {
@@ -472,7 +472,7 @@
             "en": "Temp min interval"
           },
           "hint": {
-            "en": "Set a min report interval.\nRange: 0 - 65535, step size 1, \ndefault: 0 [seconds] (Restart the app after changing this value)"
+            "en": "Set a min report interval.\nRange: 0 - 65535, step size 1, \ndefault: 0 [seconds] (Press button on device within 10 seconds after saving settings)"
           },
           "value": 0,
           "attr": {
@@ -488,7 +488,7 @@
             "en": "Temp max interval"
           },
           "hint": {
-            "en": "Set a max report interval.\nRange: 0 - 65535, step size 1, \ndefault: 3600 [seconds] 0 = disable periodic reporting, 65535 = no automatic reporting (Restart the app after changing this value)"
+            "en": "Set a max report interval.\nRange: 0 - 65535, step size 1, \ndefault: 3600 [seconds] 0 = disable periodic reporting, 65535 = no automatic reporting (Press button on device within 10 seconds after saving settings)"
           },
           "value": 3600,
           "attr": {
@@ -504,9 +504,9 @@
             "en": "Temp min change"
           },
           "hint": {
-            "en": "Set a min report change.\nRange: 0 - 1000, step size 1, \ndefault: 100 [1 = 0,01 °C] (Restart the app after changing this value)"
+            "en": "Set a min report change.\nRange: 0 - 1000, step size 1, \ndefault: 10 [1 = 0,01 °C] (Press button on device within 10 seconds after saving settings)"
           },
-          "value": 100,
+          "value": 10,
           "attr": {
             "min": 0,
             "max": 1000,
@@ -520,7 +520,7 @@
             "en": "Hum min interval"
           },
           "hint": {
-            "en": "Set a min report interval.\nRange: 0 - 65535, step size 1, \ndefault: 0 [seconds] (Restart the app after changing this value)"
+            "en": "Set a min report interval.\nRange: 0 - 65535, step size 1, \ndefault: 0 [seconds] (Press button on device within 10 seconds after saving settings)"
           },
           "value": 0,
           "attr": {
@@ -536,7 +536,7 @@
             "en": "Hum max interval"
           },
           "hint": {
-            "en": "Set a max report interval.\nRange: 0 - 65535, step size 1, \ndefault: 3600 [seconds] 0 = disable periodic reporting, 65535 = no automatic reporting (Restart the app after changing this value)"
+            "en": "Set a max report interval.\nRange: 0 - 65535, step size 1, \ndefault: 3600 [seconds] 0 = disable periodic reporting, 65535 = no automatic reporting (Press button on device within 10 seconds after saving settings)"
           },
           "value": 3600,
           "attr": {
@@ -552,7 +552,7 @@
             "en": "Hum min change"
           },
           "hint": {
-            "en": "Set a min report change.\nRange: 0 - 1000, step size 1, \ndefault: 100 [1 = 0.01 %] (Restart the app after changing this value)"
+            "en": "Set a min report change.\nRange: 0 - 1000, step size 1, \ndefault: 100 [1 = 0.01 %] (Press button on device within 10 seconds after saving settings)"
           },
           "value": 100,
           "attr": {
@@ -725,7 +725,7 @@
             "en": "Temp min interval"
           },
           "hint": {
-            "en": "Set a min report interval.\nRange: 0 - 65535, step size 1, \ndefault: 0 [seconds] (Restart the app after changing this value)"
+            "en": "Set a min report interval.\nRange: 0 - 65535, step size 1, \ndefault: 0 [seconds] (Press button on device within 10 seconds after saving settings)"
           },
           "value": 0,
           "attr": {
@@ -741,7 +741,7 @@
             "en": "Temp max interval"
           },
           "hint": {
-            "en": "Set a max report interval.\nRange: 0 - 65535, step size 1, \ndefault: 3600 [seconds] 0 = disable periodic reporting, 65535 = no automatic reporting (Restart the app after changing this value)"
+            "en": "Set a max report interval.\nRange: 0 - 65535, step size 1, \ndefault: 3600 [seconds] 0 = disable periodic reporting, 65535 = no automatic reporting (Press button on device within 10 seconds after saving settings)"
           },
           "value": 3600,
           "attr": {
@@ -757,9 +757,9 @@
             "en": "Temp min change"
           },
           "hint": {
-            "en": "Set a min report change.\nRange: 0 - 1000, step size 1, \ndefault: 100 [1 = 0,01 °C] (Restart the app after changing this value)"
+            "en": "Set a min report change.\nRange: 0 - 1000, step size 1, \ndefault: 10 [1 = 0,01 °C] (Press button on device within 10 seconds after saving settings)"
           },
-          "value": 100,
+          "value": 10,
           "attr": {
             "min": 0,
             "max": 1000,
@@ -773,7 +773,7 @@
             "en": "Hum min interval"
           },
           "hint": {
-            "en": "Set a min report interval.\nRange: 0 - 65535, step size 1, \ndefault: 0 [seconds] (Restart the app after changing this value)"
+            "en": "Set a min report interval.\nRange: 0 - 65535, step size 1, \ndefault: 0 [seconds] (Press button on device within 10 seconds after saving settings)"
           },
           "value": 0,
           "attr": {
@@ -789,7 +789,7 @@
             "en": "Hum max interval"
           },
           "hint": {
-            "en": "Set a max report interval.\nRange: 0 - 65535, step size 1, \ndefault: 3600 [seconds] 0 = disable periodic reporting, 65535 = no automatic reporting (Restart the app after changing this value)"
+            "en": "Set a max report interval.\nRange: 0 - 65535, step size 1, \ndefault: 3600 [seconds] 0 = disable periodic reporting, 65535 = no automatic reporting (Press button on device within 10 seconds after saving settings)"
           },
           "value": 3600,
           "attr": {
@@ -805,7 +805,7 @@
             "en": "Hum min change"
           },
           "hint": {
-            "en": "Set a min report change.\nRange: 0 - 1000, step size 1, \ndefault: 100 [1 = 0.01 %] (Restart the app after changing this value)"
+            "en": "Set a min report change.\nRange: 0 - 1000, step size 1, \ndefault: 100 [1 = 0.01 %] (Press button on device within 10 seconds after saving settings)"
           },
           "value": 100,
           "attr": {
@@ -1052,7 +1052,7 @@
             "en": "Temp min interval"
           },
           "hint": {
-            "en": "Set a min report interval.\nRange: 0 - 65535, step size 1, \ndefault: 0 [seconds] (Restart the app after changing this value)"
+            "en": "Set a min report interval.\nRange: 0 - 65535, step size 1, \ndefault: 0 [seconds] (Press button on device within 10 seconds after saving settings)"
           },
           "value": 0,
           "attr": {
@@ -1068,7 +1068,7 @@
             "en": "Temp max interval"
           },
           "hint": {
-            "en": "Set a max report interval.\nRange: 0 - 65535, step size 1, \ndefault: 3600 [seconds] 0 = disable periodic reporting, 65535 = no automatic reporting (Restart the app after changing this value)"
+            "en": "Set a max report interval.\nRange: 0 - 65535, step size 1, \ndefault: 3600 [seconds] 0 = disable periodic reporting, 65535 = no automatic reporting (Press button on device within 10 seconds after saving settings)"
           },
           "value": 3600,
           "attr": {
@@ -1084,9 +1084,9 @@
             "en": "Temp min change"
           },
           "hint": {
-            "en": "Set a min report change.\nRange: 0 - 1000, step size 1, \ndefault: 100 [1 = 0,01 °C] (Restart the app after changing this value)"
+            "en": "Set a min report change.\nRange: 0 - 1000, step size 1, \ndefault: 10 [1 = 0,01 °C] (Press button on device within 10 seconds after saving settings)"
           },
-          "value": 100,
+          "value": 10,
           "attr": {
             "min": 0,
             "max": 1000,
@@ -1100,7 +1100,7 @@
             "en": "Hum min interval"
           },
           "hint": {
-            "en": "Set a min report interval.\nRange: 0 - 65535, step size 1, \ndefault: 0 [seconds] (Restart the app after changing this value)"
+            "en": "Set a min report interval.\nRange: 0 - 65535, step size 1, \ndefault: 0 [seconds] (Press button on device within 10 seconds after saving settings)"
           },
           "value": 0,
           "attr": {
@@ -1116,7 +1116,7 @@
             "en": "Hum max interval"
           },
           "hint": {
-            "en": "Set a max report interval.\nRange: 0 - 65535, step size 1, \ndefault: 3600 [seconds] 0 = disable periodic reporting, 65535 = no automatic reporting (Restart the app after changing this value)"
+            "en": "Set a max report interval.\nRange: 0 - 65535, step size 1, \ndefault: 3600 [seconds] 0 = disable periodic reporting, 65535 = no automatic reporting (Press button on device within 10 seconds after saving settings)"
           },
           "value": 3600,
           "attr": {
@@ -1132,7 +1132,7 @@
             "en": "Hum min change"
           },
           "hint": {
-            "en": "Set a min report change.\nRange: 0 - 1000, step size 1, \ndefault: 100 [1 = 0.01 %] (Restart the app after changing this value)"
+            "en": "Set a min report change.\nRange: 0 - 1000, step size 1, \ndefault: 100 [1 = 0.01 %] (Press button on device within 10 seconds after saving settings)"
           },
           "value": 100,
           "attr": {

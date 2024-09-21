@@ -1,7 +1,7 @@
 {
     "id": "ZBSW02",
     "name": {
-      "en": "2 Gang Wall Switch"
+      "en": "2 Gang Wall Switch (SW02)"
     },
     "class": "socket",
     "platforms": ["local"],

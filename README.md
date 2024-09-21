@@ -2,7 +2,7 @@
 Adds support for SONOFF Zigbee devices
 
 Supported devices:
-- Windows / Door Sensor - SNZB-04 / DS01
+- Windows / Door Sensor - SNZB-04 / SNZB-04P / DS01
 - Motion Sensor - SNZB-03 / ms01, MS01, MSO1
 - Wireless Switch - SNZB-01 / WB01
 - Cord switch - Basic ZBR3
@@ -19,5 +19,6 @@ Supported devices:
 - Ultrasonic Sensor - SNZB-06P
 - Wireless Button - SNZB-01P
 - Micro Zigbee USB Smart Adaptor - ZBMicro
+- 4 Channel Relay Board / ZB-SW04
 
 To request additional devices, please use Athom Homey Community Forum or the Github repository.

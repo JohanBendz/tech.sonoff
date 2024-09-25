@@ -1,6 +1,6 @@
 {
   "name": {
-    "en": "Switch (Basic ZBR3)"
+    "en": "Cord Switch (Basic ZBR3)"
   },
   "class": "socket",
   "platforms": ["local"],

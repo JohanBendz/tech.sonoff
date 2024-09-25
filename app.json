@@ -67,7 +67,7 @@
   "drivers": [
     {
       "name": {
-        "en": "Switch (Basic ZBR3)"
+        "en": "Cord Switch (Basic ZBR3)"
       },
       "class": "socket",
       "platforms": [
@@ -1652,7 +1652,7 @@
     },
     {
       "name": {
-        "en": "Two Way Smart Switch (ZBMINI)"
+        "en": "2 Way Smart Switch (ZBMINI)"
       },
       "class": "socket",
       "platforms": [

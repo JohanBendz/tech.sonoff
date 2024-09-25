@@ -1,6 +1,6 @@
 {
   "name": {
-    "en": "Two Way Smart Switch (ZBMINI)"
+    "en": "2 Way Smart Switch (ZBMINI)"
   },
   "class": "socket",
   "platforms": ["local"],

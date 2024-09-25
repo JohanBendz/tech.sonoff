@@ -88,5 +88,8 @@
     },
     "0.0.37": {
       "en": "Added SNZB-03P and TRVZB"
+    },
+    "0.0.38": {
+      "en": "Corrected names, updated icons and info"
     }
 }

@@ -1,6 +1,6 @@
 {
   "name": {
-    "en": "Micro Zigbee USB Smart Adaptor"
+    "en": "Micro Zigbee USB Smart Adaptor (ZBMicro)"
   },
   "class": "socket",
   "platforms": ["local"],

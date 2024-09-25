@@ -1,6 +1,6 @@
 {
   "name": {
-    "en": "ZBMINI-L"
+    "en": "Smart Switch (ZBMINI-L)"
   },
   "class": "socket",
   "platforms": ["local"],

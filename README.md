@@ -2,23 +2,24 @@
 Adds support for SONOFF Zigbee devices
 
 Supported devices:
-- Windows / Door Sensor - SNZB-04 / SNZB-04P / DS01
-- Motion Sensor - SNZB-03 / ms01, MS01, MSO1
-- Wireless Switch - SNZB-01 / WB01
-- Cord switch - Basic ZBR3
-- Temperature and Humidity Sensor - SNZB-02P / SNZB-02 (TH01)
-- Smart Switch - ZBMINI / 01MINIZB
-- 1 Gang Wall Switch / ZB-SW01
-- 2 Gang Wall Switch / ZB-SW02
-- 3 Gang Wall Switch / ZB-SW03
-- OnOff Controller / SA-003-Zigbee
-- Plug - SONOFF-ZB-S26 / S26R2ZB
-- Smart Switch - ZBMINI-L
-- Temperature and Humidity sensor with LCD screen - SNZB-02D
-- Smart Switch - ZBMINIL2
-- Ultrasonic Sensor - SNZB-06P
-- Wireless Button - SNZB-01P
-- Micro Zigbee USB Smart Adaptor - ZBMicro
-- 4 Channel Relay Board / ZB-SW04
+- SNZB-01 / WB01 - Wireless Switch
+- SNZB-01P - Wireless Button
+- SNZB-02D - Temperature and Humidity sensor with LCD screen
+- SNZB-02P / SNZB-02 / TH01 - Temperature and Humidity Sensor
+- SNZB-03 / ms01 / MS01 / MSO1 - Motion Sensor
+- SNZB-04 / SNZB-04P / DS01 - Windows / Door Sensor
+- SNZB-06P - Ultrasonic Sensor
+- Basic ZBR3 - Cord switch
+- ZBMINI / 01MINIZB - Smart Switch
+- ZB-SW01 - 1 Gang Wall Switch
+- ZB-SW02 - 2 Gang Wall Switch
+- ZB-SW03 - 3 Gang Wall Switch
+- ZB-SW04 - 4 Channel Relay Board
+- SA-003-Zigbee - OnOff Controller
+- ZB-S26 / S26R2ZB - Plug
+- ZBMINI-L - Smart Switch
+- ZBMINIL2 - Smart Switch
+- ZBMicro - Micro Zigbee USB Smart Adaptor
+- TRVZB - Thermostat
 
 To request additional devices, please use Athom Homey Community Forum or the Github repository.

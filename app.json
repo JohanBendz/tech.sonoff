@@ -67,7 +67,7 @@
   "drivers": [
     {
       "name": {
-        "en": "Basic ZBR3"
+        "en": "Switch (Basic ZBR3)"
       },
       "class": "socket",
       "platforms": [
@@ -193,7 +193,7 @@
     },
     {
       "name": {
-        "en": "eWeLink OnOff module (SA-003)"
+        "en": "Switch module (SA-003)"
       },
       "class": "socket",
       "platforms": [
@@ -819,6 +819,128 @@
     },
     {
       "name": {
+        "en": "Motion Sensor (SNZB-03P)"
+      },
+      "class": "sensor",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "icon": "/drivers/SNZB-03P/assets/icon.svg",
+      "images": {
+        "large": "/drivers/SNZB-03P/assets/images/large.png",
+        "small": "/drivers/SNZB-03P/assets/images/small.png"
+      },
+      "capabilities": [
+        "alarm_motion",
+        "measure_battery",
+        "measure_luminance"
+      ],
+      "energy": {
+        "batteries": [
+          "CR2450"
+        ]
+      },
+      "zigbee": {
+        "manufacturerName": "eWeLink",
+        "productId": [
+          "SNZB-03P"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              1,
+              3,
+              1030,
+              1280,
+              64529
+            ],
+            "bindings": [
+              1,
+              1030,
+              1280
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/SNZB-03P/assets/learn.svg",
+          "instruction": {
+            "en": "Press and hold the button on the device for approximately 10 seconds until the LED blinks, indicating it's in pairing mode."
+          }
+        }
+      },
+      "id": "SNZB-03P",
+      "settings": [
+        {
+          "id": "alarm_reset_time",
+          "type": "number",
+          "label": {
+            "en": "Time until motion alarm is reset (s)"
+          },
+          "hint": {
+            "en": "Time from motion alarm triggers until it resets.\ndefault: 3 [s]"
+          },
+          "value": 3,
+          "attr": {
+            "min": 1,
+            "max": 86400,
+            "step": 1
+          }
+        },
+        {
+          "id": "sensitivity",
+          "type": "radio",
+          "label": {
+            "en": "Sensitivity Level"
+          },
+          "hint": {
+            "en": "Adjust the sensitivity level of the motion sensor.\n1: 2.5m, 2: 3.5m, 3: 4m"
+          },
+          "value": "1",
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Low (2.5m)"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Medium (3.5m)"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "High (4m)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "illumination_threshold",
+          "type": "number",
+          "label": {
+            "en": "Illumination Threshold"
+          },
+          "hint": {
+            "en": "Set the threshold for illumination to determine 'bright' or 'dim' conditions.\nDefault: 50"
+          },
+          "value": 50,
+          "attr": {
+            "min": 0,
+            "max": 255,
+            "step": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": {
         "en": "Door/Window Sensor (SNZB-04P)"
       },
       "class": "sensor",
@@ -951,10 +1073,10 @@
           "id": "alarm_reset_time",
           "type": "number",
           "label": {
-            "en": "Time until contact alarm is reset (s)"
+            "en": "Time until motion alarm is reset (s)"
           },
           "hint": {
-            "en": "Time from contact alarm triggers until it resets.\ndefault: 3 [s]"
+            "en": "Time from motion alarm triggers until it resets.\ndefault: 3 [s]"
           },
           "value": 3,
           "attr": {
@@ -1219,6 +1341,117 @@
       ]
     },
     {
+      "id": "TRVZB",
+      "name": {
+        "en": "Thermostat (TRVZB)"
+      },
+      "class": "thermostat",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "images": {
+        "large": "/drivers/TRVZB/assets/images/large.png",
+        "small": "/drivers/TRVZB/assets/images/small.png"
+      },
+      "capabilities": [
+        "measure_temperature",
+        "target_temperature",
+        "measure_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "AA",
+          "AA",
+          "AA"
+        ]
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "SONOFF"
+        ],
+        "productId": [
+          "TRVZB"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              1,
+              3,
+              6,
+              32,
+              513,
+              64529
+            ],
+            "bindings": [
+              1,
+              6,
+              513
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/TRVZB/assets/learn.svg",
+          "instruction": {
+            "en": "Press reset on top for approx 10 seconds until the red LED blinks."
+          }
+        }
+      },
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Settings"
+          },
+          "children": [
+            {
+              "id": "localTemperatureCalibration",
+              "type": "number",
+              "label": {
+                "en": "Local Temperature Calibration"
+              },
+              "hint": {
+                "en": "Adjust the local temperature calibration."
+              },
+              "min": -7,
+              "max": 7,
+              "step": 0.1,
+              "default": 0
+            },
+            {
+              "id": "child_lock",
+              "type": "checkbox",
+              "label": {
+                "en": "Child Lock"
+              }
+            },
+            {
+              "id": "open_window",
+              "type": "checkbox",
+              "label": {
+                "en": "Open Window Detection"
+              }
+            },
+            {
+              "id": "frost_protection_temperature",
+              "type": "number",
+              "label": {
+                "en": "Frost Protection Temperature"
+              },
+              "attr": {
+                "min": 4,
+                "max": 35,
+                "step": 0.1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": {
         "en": "Wireless Switch (SNZB-01)"
       },
@@ -1419,7 +1652,7 @@
     },
     {
       "name": {
-        "en": "ZBMINI"
+        "en": "Two Way Smart Switch (ZBMINI)"
       },
       "class": "socket",
       "platforms": [
@@ -1473,7 +1706,7 @@
     },
     {
       "name": {
-        "en": "ZBMINIL2"
+        "en": "2 Way Smart Switch (ZBMINIL2)"
       },
       "class": "socket",
       "platforms": [
@@ -1589,7 +1822,7 @@
     },
     {
       "name": {
-        "en": "ZBMINI-L"
+        "en": "Smart Switch (ZBMINI-L)"
       },
       "class": "socket",
       "platforms": [
@@ -1643,7 +1876,7 @@
     },
     {
       "name": {
-        "en": "Micro Zigbee USB Smart Adaptor"
+        "en": "Micro Zigbee USB Smart Adaptor (ZBMicro)"
       },
       "class": "socket",
       "platforms": [
@@ -1926,7 +2159,7 @@
     },
     {
       "name": {
-        "en": "ZB S26"
+        "en": "Plug (ZB S26)"
       },
       "class": "socket",
       "platforms": [

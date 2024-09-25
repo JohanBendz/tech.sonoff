@@ -3,10 +3,10 @@
     "id": "alarm_reset_time",
     "type": "number",
     "label": {
-      "en": "Time until contact alarm is reset (s)"
+      "en": "Time until motion alarm is reset (s)"
     },
     "hint": {
-      "en": "Time from contact alarm triggers until it resets.\ndefault: 3 [s]"
+      "en": "Time from motion alarm triggers until it resets.\ndefault: 3 [s]"
     },
     "value": 3,
     "attr": {

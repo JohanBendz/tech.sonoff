@@ -1,0 +1,65 @@
+[
+  {
+    "id": "alarm_reset_time",
+    "type": "number",
+    "label": {
+      "en": "Time until motion alarm is reset (s)"
+    },
+    "hint": {
+      "en": "Time from motion alarm triggers until it resets.\ndefault: 3 [s]"
+    },
+    "value": 3,
+    "attr": {
+      "min": 1,
+      "max": 86400,
+      "step": 1
+    }
+  },
+  {
+    "id": "sensitivity",
+    "type": "radio",
+    "label": {
+      "en": "Sensitivity Level"
+    },
+    "hint": {
+      "en": "Adjust the sensitivity level of the motion sensor.\n1: 2.5m, 2: 3.5m, 3: 4m"
+    },
+    "value": "1",
+    "values": [
+      {
+        "id": "1",
+        "label": {
+          "en": "Low (2.5m)"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Medium (3.5m)"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "High (4m)"
+        }
+      }
+    ]
+  },
+  {
+    "id": "illumination_threshold",
+    "type": "number",
+    "label": {
+      "en": "Illumination Threshold"
+    },
+    "hint": {
+      "en": "Set the threshold for illumination to determine 'bright' or 'dim' conditions.\nDefault: 50"
+    },
+    "value": 50,
+    "attr": {
+      "min": 0,
+      "max": 255,
+      "step": 1
+    }
+  }
+]

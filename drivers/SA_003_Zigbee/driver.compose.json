@@ -1,6 +1,6 @@
 {
   "name": {
-    "en": "eWeLink OnOff module (SA-003)"
+    "en": "Switch module (SA-003)"
   },
   "class": "socket",
   "platforms": ["local"],

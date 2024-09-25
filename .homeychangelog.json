@@ -85,5 +85,8 @@
     },
     "0.0.36": {
       "en": "Added SNZB-04P and ZB-SW04"
+    },
+    "0.0.37": {
+      "en": "Added SNZB-03P and TRVZB"
     }
 }

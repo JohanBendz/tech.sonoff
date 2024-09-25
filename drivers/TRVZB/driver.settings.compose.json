@@ -1,0 +1,51 @@
+[
+    {
+      "type": "group",
+      "label": {
+        "en": "Settings"
+      },
+      "children": [
+        {
+          "id": "localTemperatureCalibration",
+          "type": "number",
+          "label": {
+            "en": "Local Temperature Calibration"
+          },
+          "hint": {
+            "en": "Adjust the local temperature calibration."
+          },
+          "min": -7,
+          "max": 7,
+          "step": 0.1,
+          "default": 0
+        },
+        {
+          "id": "child_lock",
+          "type": "checkbox",
+          "label": {
+            "en": "Child Lock"
+          }
+        },
+        {
+          "id": "open_window",
+          "type": "checkbox",
+          "label": {
+            "en": "Open Window Detection"
+          }
+        },
+        {
+          "id": "frost_protection_temperature",
+          "type": "number",
+          "label": {
+            "en": "Frost Protection Temperature"
+          },
+          "attr": {
+            "min": 4,
+            "max": 35,
+            "step": 0.1
+          }
+        }
+      ]
+    }
+  ]
+  

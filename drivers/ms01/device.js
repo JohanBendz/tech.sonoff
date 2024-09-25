@@ -1,6 +1,5 @@
 'use strict';
 
-const Homey = require('homey');
 const { ZigBeeDevice } = require('homey-zigbeedriver');
 const { debug, CLUSTER } = require('zigbee-clusters');
 
@@ -8,8 +7,8 @@ class MotionSensor extends ZigBeeDevice {
 	
 	async onNodeInit({ zclNode }) {
 
- 		this.enableDebug();
-		debug(true);
+ 		// this.enableDebug();
+		// debug(true);
 		this.printNode();
 
 /* 		const node = await this.homey.zigbee.getNode(this);
@@ -27,8 +26,8 @@ class MotionSensor extends ZigBeeDevice {
 
 	onIASZoneStatusChangeNotification({zoneStatus, extendedStatus, zoneId, delay,}) {
 		this.log('IASZoneStatusChangeNotification received:', zoneStatus, extendedStatus, zoneId, delay);
-		this.setCapabilityValue('alarm_motion', zoneStatus.alarm1);
-		this.setCapabilityValue('alarm_battery', zoneStatus.battery);
+		this.setCapabilityValue('alarm_motion', zoneStatus.alarm1).catch(this.error);
+		this.setCapabilityValue('alarm_battery', zoneStatus.battery).catch(this.error);
 	}
 
 	onDeleted(){

@@ -10,7 +10,7 @@ class SensorSNZB03P extends ZigBeeDevice {
         this.printNode();
 
         // Bind custom cluster to handle specific attributes
-        zclNode.endpoints[1].bindCluster(SonoffSpecificCluster, 'report');
+        await zclNode.endpoints[1].bind(SonoffSpecificCluster.NAME, this.zclNode.endpoints[1].clusters[SonoffSpecificCluster.NAME]);
 
         // Configure attribute reporting for illuminance, occupancy, and battery
         await this.configureAttributeReportingSafe([

@@ -91,5 +91,8 @@
     },
     "0.0.38": {
       "en": "Corrected names, updated icons and info"
+    },
+    "0.0.39": {
+      "en": "Fix for SNZB-03P"
     }
 }

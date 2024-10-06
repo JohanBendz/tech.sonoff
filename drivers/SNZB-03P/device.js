@@ -2,21 +2,21 @@
 
 const { ZigBeeDevice } = require('homey-zigbeedriver');
 const SonoffSpecificCluster = require('../../lib/SonoffSpecificCluster');
-const { CLUSTER } = require('zigbee-clusters');
+const { CLUSTER, Cluster } = require('zigbee-clusters');
+
+Cluster.addCluster(SonoffSpecificCluster);
 
 class SensorSNZB03P extends ZigBeeDevice {
 
     async onNodeInit({ zclNode }) {
         this.printNode();
 
-        // Bind custom cluster to handle specific attributes
-        await zclNode.endpoints[1].bind(SonoffSpecificCluster.NAME, this.zclNode.endpoints[1].clusters[SonoffSpecificCluster.NAME]);
+        await zclNode.endpoints[1].bind(SonoffSpecificCluster.ID, this.zclNode.endpoints[1].clusters[SonoffSpecificCluster.NAME]);
 
-        // Configure attribute reporting for illuminance, occupancy, and battery
         await this.configureAttributeReportingSafe([
             {
                 endpointId: 1,
-                cluster: SonoffSpecificCluster,
+                cluster: SonoffSpecificCluster.ID,
                 attributeName: 'illumination'
             },
             {

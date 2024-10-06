@@ -1,7 +1,7 @@
 {
     "id": "TRVZB",
     "name": {
-      "en": "Thermostat (TRVZB)"
+      "en": "Sonoff Thermostatic Radiator Valve (TRVZB)"
     },
     "class": "thermostat",
     "platforms": [
@@ -37,22 +37,16 @@
             0,
             1,
             3,
-            6,
-            32,
             513,
             64529
           ],
-          "bindings": [
-            1,
-            6,
-            513
-          ]
+          "bindings": [513, 64529]
         }
       },
       "learnmode": {
         "image": "{{driverAssetsPath}}/learn.svg",
         "instruction": {
-          "en": "Press reset on top for approx 10 seconds until the red LED blinks."
+          "en": "Press and hold the reset button for approximately 10 seconds until the red LED blinks."
         }
       }
     }

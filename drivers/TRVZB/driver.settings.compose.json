@@ -1,51 +1,60 @@
 [
-    {
-      "type": "group",
-      "label": {
-        "en": "Settings"
+  {
+    "type": "group",
+    "label": {
+      "en": "Settings"
+    },
+    "children": [
+      {
+        "id": "localTemperatureCalibration",
+        "type": "number",
+        "label": {
+          "en": "Local Temperature Calibration (°C)"
+        },
+        "hint": {
+          "en": "Adjust the local temperature calibration. Range: -7°C to +7°C."
+        },
+        "min": -7,
+        "max": 7,
+        "step": 0.1,
+        "default": 0
       },
-      "children": [
-        {
-          "id": "localTemperatureCalibration",
-          "type": "number",
-          "label": {
-            "en": "Local Temperature Calibration"
-          },
-          "hint": {
-            "en": "Adjust the local temperature calibration."
-          },
-          "min": -7,
-          "max": 7,
-          "step": 0.1,
-          "default": 0
+      {
+        "id": "child_lock",
+        "type": "checkbox",
+        "label": {
+          "en": "Child Lock"
         },
-        {
-          "id": "child_lock",
-          "type": "checkbox",
-          "label": {
-            "en": "Child Lock"
-          }
+        "hint": {
+          "en": "Enable or disable the child lock feature."
         },
-        {
-          "id": "open_window",
-          "type": "checkbox",
-          "label": {
-            "en": "Open Window Detection"
-          }
+        "default": false
+      },
+      {
+        "id": "open_window",
+        "type": "checkbox",
+        "label": {
+          "en": "Open Window Detection"
         },
-        {
-          "id": "frost_protection_temperature",
-          "type": "number",
-          "label": {
-            "en": "Frost Protection Temperature"
-          },
-          "attr": {
-            "min": 4,
-            "max": 35,
-            "step": 0.1
-          }
-        }
-      ]
-    }
-  ]
-  
+        "hint": {
+          "en": "Enable or disable open window detection."
+        },
+        "default": false
+      },
+      {
+        "id": "frost_protection_temperature",
+        "type": "number",
+        "label": {
+          "en": "Frost Protection Temperature (°C)"
+        },
+        "hint": {
+          "en": "Set the frost protection temperature. Range: 4°C to 35°C."
+        },
+        "min": 4,
+        "max": 35,
+        "step": 0.1,
+        "default": 5
+      }
+    ]
+  }
+]

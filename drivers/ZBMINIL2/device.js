@@ -26,7 +26,7 @@ class ZBMINIL2 extends ZigBeeDevice {
 
         if (changedKeys.includes('powerOnCtrl_state')) {
             try {
-                const powerOnCtrlstate = await this.zclNode.endpoints[1].clusters.onOff.readAttributes('powerOnCtrl');
+                const powerOnCtrlstate = await this.zclNode.endpoints[1].clusters.onOff.readAttributes(['powerOnCtrl']);
                 await this.zclNode.endpoints[11].clusters.onOff.writeAttributes({powerOnCtrl: newSettings.powerOnCtrl_state}); // default: On (On, Off, 255 = Recover)
                 this.log("Power On Control supported by device");
             } catch (error) {
@@ -36,7 +36,7 @@ class ZBMINIL2 extends ZigBeeDevice {
 
         if (changedKeys.includes('switch_type')) {
             try {
-                const rockerbehavior = await this.zclNode.endpoints[1].clusters.onOff.readAttributes('switchType');
+                const rockerbehavior = await this.zclNode.endpoints[1].clusters.onOff.readAttributes(['switchType']);
                 await this.zclNode.endpoints[1].clusters.onOffSwitch.writeAttributes({switchType: newSettings.switch_type});
                 this.log("Switch Type supported by device");
             } catch (error) {

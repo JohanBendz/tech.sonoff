@@ -97,5 +97,8 @@
     },
     "0.0.40": {
       "en": "Some fixes and rewrites of beta drivers"
+    },
+    "0.0.41": {
+      "en": "Fix for SNZB-03P"
     }
 }

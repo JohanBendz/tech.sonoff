@@ -1,6 +1,6 @@
 {
   "id": "tech.sonoff",
-  "version": "0.0.41",
+  "version": "0.0.42",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "name": {

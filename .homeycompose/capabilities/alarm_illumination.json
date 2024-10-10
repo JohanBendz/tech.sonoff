@@ -1,0 +1,24 @@
+{
+    "type": "enum",
+    "getable": true,
+    "values": [
+        {
+            "id": "dim",
+            "title": {
+                "en": "Dim"
+            }
+        },
+        {
+            "id": "bright",
+            "title": {
+                "en": "Bright"
+            }
+        }
+    ],
+    "title": {
+        "en": "Illumination"
+    },
+    "desc": {
+        "en": "Indicates if the light is bright or dim."
+    }
+}

@@ -1,104 +1,110 @@
 {
-    "0.0.1": {
-      "en": "First version"
-    },
-    "0.0.2": {
-      "en": "Temperature and Humidity Sensor added"
-    },
-    "0.0.3": {
-      "en": "Added better description"
-    },
-    "0.0.4": {
-      "en": "Added more product ID's to devices"
-    },
-    "0.0.5": {
-      "en": "Added Smart Switch, ZBMINI"
-    },
-    "0.0.6": {
-      "en": "Patch for Temp/Hum Sensor not updating (unit needs to be removed and paired again)"
-    },
-    "0.0.7": {
-      "en": "Added settings for Temp/Hum Sensor interval/change"
-    },
-    "0.0.8": {
-      "en": "SDK2 version for App Store"
-    },
-    "0.0.9": {
-      "en": "SDK3 version for test"
-    },
-    "0.0.10": {
-      "en": "Added 1 Gang Wall Switch (white label)"
-    },
-    "0.0.11": {
-      "en": "Added OnOff Controller (white label)"
-    },
-    "0.0.12": {
-      "en": "Added 2 Gang Wall Switch and 3 Gang Wall Switch (white label)"
-    },
-    "0.0.20": {
-      "en": "Patch for ZBMini (and other wired devices) not reporting device offline. Adding ProdictId variants to Motion Sensor (SNZB-03)."
-    },
-    "0.0.21": {
-      "en": "Beautifying the code..."
-    },
-    "0.0.22": {
-      "en": "Added Plug S26 and switch module ZBMini-L. Added reverse logic to door/window sensor."
-    },
-    "0.0.23": {
-      "en": "Added SNZB-02D and ZBMINIL2"
-    },
-    "0.0.24": {
-      "en": "Typo fixed. Added SNZB-02D and ZBMINIL2"
-    },
-    "0.0.25": {
-      "en": "Added SNZB-02P and made a change from light to socket class as default for light devices"
-    },
-    "0.0.26": {
-      "en": "Fix, sensors not reporting / timing out"
-    },
-    "0.0.27": {
-      "en": "Added functionality to ZBMINI-L2"
-    },
-    "0.0.28": {
-      "en": "Fixed typo.."
-    },
-    "0.0.29": {
-      "en": "Another typo fixed.."
-    },
-    "0.0.30": {
-      "en": "Added SNZB-06P"
-    },
-    "0.0.31": {
-      "en": "Added SNZB-01P"
-    },
-    "0.0.32": {
-      "en": "Fix for SNZB-06P"
-    },
-    "0.0.33": {
-      "en": "Fix for SNZB-06P and added ability to set timer for the reset of the contact alarm capability"
-    },
-    "0.0.34": {
-      "en": "Added SNZB-04 and ZBMicro"
-    },
-    "0.0.35": {
-      "en": "Improvements to attributeReportingConfig and fix to saving settings for TH01/SNZB-02/SNZB-02D/SNZB-02P/ZBMINI-L"
-    },
-    "0.0.36": {
-      "en": "Added SNZB-04P and ZB-SW04"
-    },
-    "0.0.37": {
-      "en": "Added SNZB-03P and TRVZB"
-    },
-    "0.0.38": {
-      "en": "Corrected names, updated icons and info"
-    },
-    "0.0.39": {
-      "en": "Fix for SNZB-03P"
-    },
-    "0.0.40": {
-      "en": "Some fixes and rewrites of beta drivers"
-    },
-    "0.0.41-42": {
-      "en": "Fix for SNZB-03P"
-    }
+  "0.0.1": {
+    "en": "First version"
+  },
+  "0.0.2": {
+    "en": "Temperature and Humidity Sensor added"
+  },
+  "0.0.3": {
+    "en": "Added better description"
+  },
+  "0.0.4": {
+    "en": "Added more product ID's to devices"
+  },
+  "0.0.5": {
+    "en": "Added Smart Switch, ZBMINI"
+  },
+  "0.0.6": {
+    "en": "Patch for Temp/Hum Sensor not updating (unit needs to be removed and paired again)"
+  },
+  "0.0.7": {
+    "en": "Added settings for Temp/Hum Sensor interval/change"
+  },
+  "0.0.8": {
+    "en": "SDK2 version for App Store"
+  },
+  "0.0.9": {
+    "en": "SDK3 version for test"
+  },
+  "0.0.10": {
+    "en": "Added 1 Gang Wall Switch (white label)"
+  },
+  "0.0.11": {
+    "en": "Added OnOff Controller (white label)"
+  },
+  "0.0.12": {
+    "en": "Added 2 Gang Wall Switch and 3 Gang Wall Switch (white label)"
+  },
+  "0.0.20": {
+    "en": "Patch for ZBMini (and other wired devices) not reporting device offline. Adding ProdictId variants to Motion Sensor (SNZB-03)."
+  },
+  "0.0.21": {
+    "en": "Beautifying the code..."
+  },
+  "0.0.22": {
+    "en": "Added Plug S26 and switch module ZBMini-L. Added reverse logic to door/window sensor."
+  },
+  "0.0.23": {
+    "en": "Added SNZB-02D and ZBMINIL2"
+  },
+  "0.0.24": {
+    "en": "Typo fixed. Added SNZB-02D and ZBMINIL2"
+  },
+  "0.0.25": {
+    "en": "Added SNZB-02P and made a change from light to socket class as default for light devices"
+  },
+  "0.0.26": {
+    "en": "Fix, sensors not reporting / timing out"
+  },
+  "0.0.27": {
+    "en": "Added functionality to ZBMINI-L2"
+  },
+  "0.0.28": {
+    "en": "Fixed typo.."
+  },
+  "0.0.29": {
+    "en": "Another typo fixed.."
+  },
+  "0.0.30": {
+    "en": "Added SNZB-06P"
+  },
+  "0.0.31": {
+    "en": "Added SNZB-01P"
+  },
+  "0.0.32": {
+    "en": "Fix for SNZB-06P"
+  },
+  "0.0.33": {
+    "en": "Fix for SNZB-06P and added ability to set timer for the reset of the contact alarm capability"
+  },
+  "0.0.34": {
+    "en": "Added SNZB-04 and ZBMicro"
+  },
+  "0.0.35": {
+    "en": "Improvements to attributeReportingConfig and fix to saving settings for TH01/SNZB-02/SNZB-02D/SNZB-02P/ZBMINI-L"
+  },
+  "0.0.36": {
+    "en": "Added SNZB-04P and ZB-SW04"
+  },
+  "0.0.37": {
+    "en": "Added SNZB-03P and TRVZB"
+  },
+  "0.0.38": {
+    "en": "Corrected names, updated icons and info"
+  },
+  "0.0.39": {
+    "en": "Fix for SNZB-03P"
+  },
+  "0.0.40": {
+    "en": "Some fixes and rewrites of beta drivers"
+  },
+  "0.0.41": {
+    "en": "Fix for SNZB-03P"
+  },
+  "0.0.42": {
+    "en": "Fixes"
+  },
+  "0.0.43": {
+    "en": "Fixes"
+  }
 }

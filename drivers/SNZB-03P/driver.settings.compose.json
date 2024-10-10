@@ -45,21 +45,5 @@
         }
       }
     ]
-  },
-  {
-    "id": "illumination_threshold",
-    "type": "number",
-    "label": {
-      "en": "Illumination Threshold"
-    },
-    "hint": {
-      "en": "Set the threshold for illumination to determine 'bright' or 'dim' conditions.\nDefault: 50"
-    },
-    "value": 50,
-    "attr": {
-      "min": 0,
-      "max": 255,
-      "step": 1
-    }
   }
 ]

@@ -142,10 +142,8 @@ class SensorSNZB03P extends ZigBeeDevice {
   // Handle illuminance attribute reports
   onIlluminationReport(illumination) {
     this.log('Illuminance reported:', illumination);
-    this.setCapabilityValue('measure_luminance', illumination > 50 ? 'bright' : 'dim').catch(this.error);
-
-    // Set motion alarm with illuminance
-    this.setCapabilityValue('alarm_motion', true).catch(this.error);
+    const illuminationState = illumination === 1 ? 'bright' : 'dim';
+    this.setCapabilityValue('alarm_illumination', illuminationState).catch(this.error);
   }
 
   // Handle battery percentage reports

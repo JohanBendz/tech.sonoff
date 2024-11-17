@@ -1678,10 +1678,12 @@
               3,
               4,
               5,
-              6
+              6,
+              7
             ],
             "bindings": [
-              6
+              6,
+              7
             ]
           }
         },
@@ -1693,7 +1695,47 @@
         }
       },
       "id": "ZBMINI",
-      "settings": []
+      "settings": [
+    {
+      "type": "group",
+      "label": {
+        "en": "Behavior after power loss"
+      },
+      "children": [
+        {
+          "id": "powerOnCtrl_state",
+          "type": "radio",
+          "label": {
+            "en": "Behavior when power is restored"
+          },
+          "value": "on",
+          "hint": {
+            "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+          },
+          "values": [
+            {
+              "id": "on",
+              "label": {
+                "en": "On"
+              }
+            },
+            {
+              "id": "off",
+              "label": {
+                "en": "Off"
+              }
+            },
+            {
+              "id": "recover",
+              "label": {
+                "en": "Restore last state"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
     },
     {
       "name": {

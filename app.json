@@ -1325,124 +1325,6 @@
       ]
     },
     {
-      "id": "TRVZB",
-      "name": {
-        "en": "Sonoff Thermostatic Radiator Valve (TRVZB)"
-      },
-      "class": "thermostat",
-      "platforms": [
-        "local"
-      ],
-      "connectivity": [
-        "zigbee"
-      ],
-      "images": {
-        "large": "/drivers/TRVZB/assets/images/large.png",
-        "small": "/drivers/TRVZB/assets/images/small.png"
-      },
-      "capabilities": [
-        "measure_temperature",
-        "target_temperature",
-        "measure_battery"
-      ],
-      "energy": {
-        "batteries": [
-          "AA",
-          "AA",
-          "AA"
-        ]
-      },
-      "zigbee": {
-        "manufacturerName": [
-          "SONOFF"
-        ],
-        "productId": [
-          "TRVZB"
-        ],
-        "endpoints": {
-          "1": {
-            "clusters": [
-              0,
-              1,
-              3,
-              513,
-              64529
-            ],
-            "bindings": [
-              513,
-              64529
-            ]
-          }
-        },
-        "learnmode": {
-          "image": "/drivers/TRVZB/assets/learn.svg",
-          "instruction": {
-            "en": "Press and hold the reset button for approximately 10 seconds until the red LED blinks."
-          }
-        }
-      },
-      "settings": [
-        {
-          "type": "group",
-          "label": {
-            "en": "Settings"
-          },
-          "children": [
-            {
-              "id": "localTemperatureCalibration",
-              "type": "number",
-              "label": {
-                "en": "Local Temperature Calibration (°C)"
-              },
-              "hint": {
-                "en": "Adjust the local temperature calibration. Range: -7°C to +7°C."
-              },
-              "min": -7,
-              "max": 7,
-              "step": 0.1,
-              "default": 0
-            },
-            {
-              "id": "child_lock",
-              "type": "checkbox",
-              "label": {
-                "en": "Child Lock"
-              },
-              "hint": {
-                "en": "Enable or disable the child lock feature."
-              },
-              "default": false
-            },
-            {
-              "id": "open_window",
-              "type": "checkbox",
-              "label": {
-                "en": "Open Window Detection"
-              },
-              "hint": {
-                "en": "Enable or disable open window detection."
-              },
-              "default": false
-            },
-            {
-              "id": "frost_protection_temperature",
-              "type": "number",
-              "label": {
-                "en": "Frost Protection Temperature (°C)"
-              },
-              "hint": {
-                "en": "Set the frost protection temperature. Range: 4°C to 35°C."
-              },
-              "min": 4,
-              "max": 35,
-              "step": 0.1,
-              "default": 5
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": {
         "en": "Wireless Switch (SNZB-01)"
       },
@@ -2253,6 +2135,130 @@
       },
       "id": "ms01",
       "settings": []
+    },
+    {
+      "id": "trvzb",
+      "name": {
+        "en": "Sonoff Thermostatic Radiator Valve (TRVZB)"
+      },
+      "class": "thermostat",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "images": {
+        "large": "/drivers/trvzb/assets/images/large.png",
+        "small": "/drivers/trvzb/assets/images/small.png"
+      },
+      "capabilities": [
+        "measure_temperature",
+        "target_temperature",
+        "measure_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "AA",
+          "AA",
+          "AA"
+        ]
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "SONOFF"
+        ],
+        "productId": [
+          "TRVZB"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              1,
+              1026,
+              513,
+              6,
+              10,
+              64529
+            ],
+            "bindings": [
+              1,
+              1026,
+              513,
+              6,
+              10,
+              64529
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/trvzb/assets/learn.svg",
+          "instruction": {
+            "en": "Press and hold the reset button for approximately 10 seconds until the red LED blinks."
+          }
+        }
+      },
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Settings"
+          },
+          "children": [
+            {
+              "id": "localTemperatureCalibration",
+              "type": "number",
+              "label": {
+                "en": "Local Temperature Calibration (°C)"
+              },
+              "hint": {
+                "en": "Adjust the local temperature calibration. Range: -7°C to +7°C."
+              },
+              "min": -7,
+              "max": 7,
+              "step": 0.1,
+              "default": 0
+            },
+            {
+              "id": "child_lock",
+              "type": "checkbox",
+              "label": {
+                "en": "Child Lock"
+              },
+              "hint": {
+                "en": "Enable or disable the child lock feature."
+              },
+              "default": false
+            },
+            {
+              "id": "open_window",
+              "type": "checkbox",
+              "label": {
+                "en": "Open Window Detection"
+              },
+              "hint": {
+                "en": "Enable or disable open window detection."
+              },
+              "default": false
+            },
+            {
+              "id": "frost_protection_temperature",
+              "type": "number",
+              "label": {
+                "en": "Frost Protection Temperature (°C)"
+              },
+              "hint": {
+                "en": "Set the frost protection temperature. Range: 4°C to 35°C."
+              },
+              "min": 4,
+              "max": 35,
+              "step": 0.1,
+              "default": 5
+            }
+          ]
+        }
+      ]
     }
   ],
   "flow": {

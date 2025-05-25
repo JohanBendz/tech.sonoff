@@ -819,6 +819,55 @@
     },
     {
       "name": {
+        "en": "Leak sensor (SNZB-03)"
+      },
+      "class": "sensor",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "icon": "/drivers/SNZB-03/assets/icon.svg",
+      "images": {
+        "large": "/drivers/SNZB-03/assets/images/large.png",
+        "small": "/drivers/SNZB-03/assets/images/small.png"
+      },
+      "capabilities": [
+        "alarm_water",
+        "alarm_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "AAA",
+          "AAA"
+        ]
+      },
+      "zigbee": {
+        "manufacturerName": "eWeLink",
+        "productId": [
+          "SNZB-03"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              1,
+              1280
+            ],
+            "bindings": []
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/SNZB-03/assets/learn.svg",
+          "instruction": {
+            "en": "Push a pin down the small hole on the other end of the device for aprox 8 seconds until the LED blinks rapidly."
+          }
+        }
+      },
+      "id": "SNZB-03"
+    },
+    {
+      "name": {
         "en": "Motion Sensor (SNZB-03P)"
       },
       "class": "sensor",

@@ -16,6 +16,7 @@
     "Sensor",
     "Temperature",
     "Humidity",
+    "Leak",
     "Door",
     "Window",
     "PIR",

@@ -1642,6 +1642,60 @@
       "settings": []
     },
     {
+      "id": "ZBM501",
+      "name": {
+        "en": "1 Gang Wall Switch (M5)"
+      },
+      "class": "socket",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "capabilities": [
+        "onoff"
+      ],
+      "images": {
+        "large": "/drivers/ZBM501/assets/images/large.png",
+        "small": "/drivers/ZBM501/assets/images/small.png"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 0,
+          "usageOff": 0
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "SONOFF"
+        ],
+        "productId": [
+          "ZBM5-1C-80/86"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              4,
+              5,
+              6
+            ],
+            "bindings": [
+              6
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/ZBM501/assets/icon.svg",
+          "instruction": {
+            "en": "Press the button for 10 seconds (the LED should start blinking)."
+          }
+        }
+      },
+      "settings": []
+    },
+    {
       "name": {
         "en": "2 Way Smart Switch (ZBMINI)"
       },

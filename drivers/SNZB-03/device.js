@@ -6,7 +6,12 @@ const { CLUSTER } = require('zigbee-clusters');
 class SNZB03 extends ZigBeeDevice {
   async onNodeInit({ zclNode }) {
     this._zone = zclNode.endpoints[1].clusters[CLUSTER.IAS_ZONE.NAME];
-    this._isWaterSensor = this.getStoreValue('verifiedWaterSensor') === true;
+    const verified = this.getStoreValue('verifiedWaterSensor');
+    // Existing installations already selected this water-sensor driver. Keep their
+    // reports working during migration even if the battery device is asleep.
+    // Do not persist this assumption as a successful IAS verification.
+    this._isWaterSensor = verified === true
+      || (verified == null && !this.isFirstInit());
     this._statusRevision = 0;
 
     // Keep persisted alarms until a fresh device report or read replaces them.

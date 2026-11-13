@@ -6,7 +6,7 @@ const vm = require('node:vm');
 const fs = require('node:fs');
 const { EventEmitter } = require('node:events');
 
-function fixture({ type = 'waterSensor', status = { alarm1: false, battery: false }, verified = false } = {}) {
+function fixture({ type = 'waterSensor', status = { alarm1: false, battery: false }, verified = false, firstInit = true } = {}) {
   const context = {
     module: { exports: {} },
     require: name => name === 'homey-zigbeedriver' ? { ZigBeeDevice: class {} } : require(name),
@@ -22,6 +22,7 @@ function fixture({ type = 'waterSensor', status = { alarm1: false, battery: fals
   const values = { alarm_water: true, alarm_battery: true };
   const store = { verifiedWaterSensor: verified };
   Object.assign(device, {
+    isFirstInit: () => firstInit,
     getStoreValue: key => store[key],
     setStoreValue: async (key, value) => { store[key] = value; },
     setCapabilityValue: async (key, value) => { values[key] = value; },
@@ -89,4 +90,21 @@ test('live notification wins over an older overlapping status read', async () =>
   resolveRead({ zoneStatus: { alarm1: false, battery: false } });
   await sync;
   assert.deepEqual(f.values, { alarm_water: true, alarm_battery: true });
+});
+
+test('existing installations keep accepting reports while the first type verification is offline', async () => {
+  const f = fixture({ verified: null, firstInit: false });
+  f.zone.readAttributes = async () => { throw new Error('sleeping'); };
+  await f.init();
+  assert.equal(f.device.unavailable, undefined);
+  assert.equal(f.store.verifiedWaterSensor, null);
+  await f.device._onZoneStatus({ alarm1: false, battery: false });
+  assert.deepEqual(f.values, { alarm_water: false, alarm_battery: false });
+  f.zone.readAttributes = async ([key]) => key === 'zoneType'
+    ? { zoneType: 'motionSensor' } : { zoneStatus: { alarm1: true } };
+  await f.device.onEndDeviceAnnounce();
+  assert.equal(f.store.verifiedWaterSensor, false);
+  assert.match(f.device.unavailable, /not an IAS water leak sensor/);
+  await f.device._onZoneStatus({ alarm1: true });
+  assert.equal(f.values.alarm_water, false);
 });

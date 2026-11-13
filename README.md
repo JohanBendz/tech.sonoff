@@ -11,6 +11,7 @@ Supported devices:
 - SNZB-03P - Motion Sensor 
 - SNZB-04 / SNZB-04P / DS01 - Windows / Door Sensor
 - SNZB-06P - Ultrasonic Sensor
+- SNZB-09P - Indoor Siren (sound, light, volume, duration, battery and tamper)
 - Basic ZBR3 - Cord switch
 - ZBMINI / 01MINIZB - 2 Way Smart Switch
 - ZB-SW01 - 1 Gang Wall Switch

@@ -1,0 +1,68 @@
+{
+  "name": {
+    "en": "Indoor Siren (SNZB-09P)"
+  },
+  "class": "other",
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "zigbee"
+  ],
+  "icon": "{{driverAssetsPath}}/icon.svg",
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "capabilities": [
+    "onoff",
+    "measure_battery",
+    "alarm_battery",
+    "alarm_tamper"
+  ],
+  "capabilitiesOptions": {
+    "onoff": {
+      "title": {
+        "en": "Siren"
+      },
+      "desc": {
+        "en": "Commanded state; on firmware 1.1.2 the state is estimated until the configured duration expires."
+      }
+    }
+  },
+  "zigbee": {
+    "manufacturerName": "SONOFF",
+    "productId": [
+      "SNZB-09P"
+    ],
+    "endpoints": {
+      "1": {
+        "clusters": [
+          0,
+          1,
+          3,
+          32,
+          1280,
+          1282,
+          64529
+        ],
+        "bindings": [
+          1,
+          1280,
+          64529
+        ]
+      }
+    },
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Hold the pairing button for 5 seconds until the red indicator flashes."
+      }
+    }
+  },
+  "energy": {
+    "batteries": [
+      "INTERNAL"
+    ]
+  }
+}

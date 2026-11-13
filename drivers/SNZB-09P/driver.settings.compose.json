@@ -1,0 +1,133 @@
+[
+  {
+    "id": "alarmSoundEnable",
+    "type": "checkbox",
+    "label": {
+      "en": "Alarm sound"
+    },
+    "value": true
+  },
+  {
+    "id": "alarmLightEnable",
+    "type": "checkbox",
+    "label": {
+      "en": "Alarm light"
+    },
+    "value": true
+  },
+  {
+    "id": "alarmSoundType",
+    "type": "dropdown",
+    "label": {
+      "en": "Alarm sound preset"
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Classic siren"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Steady siren"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Chirp"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Rising siren"
+        }
+      },
+      {
+        "id": "4",
+        "label": {
+          "en": "Hi-lo tone"
+        }
+      },
+      {
+        "id": "5",
+        "label": {
+          "en": "Warning siren"
+        }
+      },
+      {
+        "id": "6",
+        "label": {
+          "en": "Rapid siren"
+        }
+      },
+      {
+        "id": "7",
+        "label": {
+          "en": "Intermittent tone"
+        }
+      },
+      {
+        "id": "8",
+        "label": {
+          "en": "Emergency siren"
+        }
+      },
+      {
+        "id": "9",
+        "label": {
+          "en": "Pulse tone"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alarmVolumeLevel",
+    "type": "dropdown",
+    "label": {
+      "en": "Alarm volume"
+    },
+    "value": "1",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Low"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Medium"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "High"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Maximum"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alarmDuration",
+    "type": "number",
+    "label": {
+      "en": "Alarm duration (seconds)"
+    },
+    "value": 10,
+    "min": 1,
+    "max": 900,
+    "step": 1
+  }
+]

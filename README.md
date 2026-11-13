@@ -6,10 +6,12 @@ Supported devices:
 - SNZB-01P - Wireless Button
 - SNZB-02D - Temperature and Humidity sensor with LCD screen
 - SNZB-02P / SNZB-02 / TH01 - Temperature and Humidity Sensor
+- SNZB-03 (eWeLink water sensor variant) - Leak Sensor
 - SNZB-03 / ms01 / MS01 / MSO1 - Motion Sensor
 - SNZB-03P - Motion Sensor 
 - SNZB-04 / SNZB-04P / DS01 - Windows / Door Sensor
 - SNZB-06P - Ultrasonic Sensor
+- SNZB-09P - Indoor Siren (sound, light, volume, duration, battery and tamper)
 - Basic ZBR3 - Cord switch
 - ZBMINI / 01MINIZB - 2 Way Smart Switch
 - ZB-SW01 - 1 Gang Wall Switch

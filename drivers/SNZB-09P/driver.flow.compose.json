@@ -1,0 +1,149 @@
+{
+  "actions": [
+    {
+      "id": "SNZB-09P_play_sound",
+      "title": {
+        "en": "Play a sound",
+        "fi": "Soita \u00e4\u00e4ni"
+      },
+      "titleFormatted": {
+        "en": "Play [[sound]] at [[volume]] volume for [[duration]] seconds with light [[light]]"
+      },
+      "args": [
+        {
+          "name": "sound",
+          "type": "dropdown",
+          "title": {
+            "en": "Sound"
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Classic siren"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Steady siren"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Chirp"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Rising siren"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Hi-lo tone"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Warning siren"
+              }
+            },
+            {
+              "id": "6",
+              "label": {
+                "en": "Rapid siren"
+              }
+            },
+            {
+              "id": "7",
+              "label": {
+                "en": "Intermittent tone"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Emergency siren"
+              }
+            },
+            {
+              "id": "9",
+              "label": {
+                "en": "Pulse tone"
+              }
+            }
+          ]
+        },
+        {
+          "name": "volume",
+          "type": "dropdown",
+          "title": {
+            "en": "Volume"
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Low"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Medium"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "High"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Maximum"
+              }
+            }
+          ]
+        },
+        {
+          "name": "duration",
+          "type": "number",
+          "title": {
+            "en": "Duration (seconds)"
+          },
+          "min": 1,
+          "max": 900,
+          "step": 1
+        },
+        {
+          "name": "light",
+          "type": "dropdown",
+          "title": {
+            "en": "Light"
+          },
+          "values": [
+            {
+              "id": "off",
+              "label": {
+                "en": "Off"
+              }
+            },
+            {
+              "id": "on",
+              "label": {
+                "en": "On"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

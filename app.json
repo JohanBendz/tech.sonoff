@@ -17,6 +17,7 @@
     "Sensor",
     "Temperature",
     "Humidity",
+    "Leak",
     "Door",
     "Window",
     "PIR",
@@ -819,6 +820,57 @@
     },
     {
       "name": {
+        "en": "eWeLink Water Leak Sensor (SNZB-03)"
+      },
+      "class": "sensor",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "icon": "/drivers/SNZB-03/assets/icon.svg",
+      "images": {
+        "large": "/drivers/SNZB-03/assets/images/large.png",
+        "small": "/drivers/SNZB-03/assets/images/small.png"
+      },
+      "capabilities": [
+        "alarm_water",
+        "alarm_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "AAA",
+          "AAA"
+        ]
+      },
+      "zigbee": {
+        "manufacturerName": "eWeLink",
+        "productId": [
+          "SNZB-03"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              1,
+              1280
+            ],
+            "bindings": [
+              1280
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/SNZB-03/assets/icon.svg",
+          "instruction": {
+            "en": "Push a pin down the small hole on the other end of the device for aprox 8 seconds until the LED blinks rapidly."
+          }
+        }
+      },
+      "id": "SNZB-03"
+    },
+    {
+      "name": {
         "en": "Motion Sensor (SNZB-03P)"
       },
       "class": "sensor",
@@ -1068,6 +1120,208 @@
             "max": 86400,
             "step": 1
           }
+        }
+      ]
+    },
+    {
+      "name": {
+        "en": "Indoor Siren (SNZB-09P)"
+      },
+      "class": "other",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "icon": "/drivers/SNZB-09P/assets/icon.svg",
+      "images": {
+        "large": "/drivers/SNZB-09P/assets/images/large.png",
+        "small": "/drivers/SNZB-09P/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "measure_battery",
+        "alarm_battery",
+        "alarm_tamper"
+      ],
+      "capabilitiesOptions": {
+        "onoff": {
+          "title": {
+            "en": "Siren"
+          },
+          "desc": {
+            "en": "Commanded state; on firmware 1.1.2 the state is estimated until the configured duration expires."
+          }
+        }
+      },
+      "zigbee": {
+        "manufacturerName": "SONOFF",
+        "productId": [
+          "SNZB-09P"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              1,
+              3,
+              32,
+              1280,
+              1282,
+              64529
+            ],
+            "bindings": [
+              1,
+              1280,
+              64529
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/SNZB-09P/assets/learnmode.svg",
+          "instruction": {
+            "en": "Hold the pairing button for 5 seconds until the red indicator flashes."
+          }
+        }
+      },
+      "energy": {
+        "batteries": [
+          "INTERNAL"
+        ]
+      },
+      "id": "SNZB-09P",
+      "settings": [
+        {
+          "id": "alarmSoundEnable",
+          "type": "checkbox",
+          "label": {
+            "en": "Alarm sound"
+          },
+          "value": true
+        },
+        {
+          "id": "alarmLightEnable",
+          "type": "checkbox",
+          "label": {
+            "en": "Alarm light"
+          },
+          "value": true
+        },
+        {
+          "id": "alarmSoundType",
+          "type": "dropdown",
+          "label": {
+            "en": "Alarm sound preset"
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Classic siren"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Steady siren"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Chirp"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Rising siren"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Hi-lo tone"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Warning siren"
+              }
+            },
+            {
+              "id": "6",
+              "label": {
+                "en": "Rapid siren"
+              }
+            },
+            {
+              "id": "7",
+              "label": {
+                "en": "Intermittent tone"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Emergency siren"
+              }
+            },
+            {
+              "id": "9",
+              "label": {
+                "en": "Pulse tone"
+              }
+            }
+          ]
+        },
+        {
+          "id": "alarmVolumeLevel",
+          "type": "dropdown",
+          "label": {
+            "en": "Alarm volume"
+          },
+          "value": "1",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Low"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Medium"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "High"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Maximum"
+              }
+            }
+          ]
+        },
+        {
+          "id": "alarmDuration",
+          "type": "number",
+          "label": {
+            "en": "Alarm duration (seconds)"
+          },
+          "value": 10,
+          "min": 1,
+          "max": 900,
+          "step": 1
         }
       ]
     },
@@ -2332,6 +2586,158 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=WB01"
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "SNZB-09P_play_sound",
+        "title": {
+          "en": "Play a sound",
+          "fi": "Soita ääni"
+        },
+        "titleFormatted": {
+          "en": "Play [[sound]] at [[volume]] volume for [[duration]] seconds with light [[light]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=SNZB-09P"
+          },
+          {
+            "name": "sound",
+            "type": "dropdown",
+            "title": {
+              "en": "Sound"
+            },
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "Classic siren"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "Steady siren"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Chirp"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Rising siren"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "Hi-lo tone"
+                }
+              },
+              {
+                "id": "5",
+                "label": {
+                  "en": "Warning siren"
+                }
+              },
+              {
+                "id": "6",
+                "label": {
+                  "en": "Rapid siren"
+                }
+              },
+              {
+                "id": "7",
+                "label": {
+                  "en": "Intermittent tone"
+                }
+              },
+              {
+                "id": "8",
+                "label": {
+                  "en": "Emergency siren"
+                }
+              },
+              {
+                "id": "9",
+                "label": {
+                  "en": "Pulse tone"
+                }
+              }
+            ]
+          },
+          {
+            "name": "volume",
+            "type": "dropdown",
+            "title": {
+              "en": "Volume"
+            },
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "Low"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "Medium"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "High"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Maximum"
+                }
+              }
+            ]
+          },
+          {
+            "name": "duration",
+            "type": "number",
+            "title": {
+              "en": "Duration (seconds)"
+            },
+            "min": 1,
+            "max": 900,
+            "step": 1
+          },
+          {
+            "name": "light",
+            "type": "dropdown",
+            "title": {
+              "en": "Light"
+            },
+            "values": [
+              {
+                "id": "off",
+                "label": {
+                  "en": "Off"
+                }
+              },
+              {
+                "id": "on",
+                "label": {
+                  "en": "On"
+                }
+              }
+            ]
           }
         ]
       }

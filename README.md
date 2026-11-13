@@ -6,7 +6,7 @@ Supported devices:
 - SNZB-01P - Wireless Button
 - SNZB-02D - Temperature and Humidity sensor with LCD screen
 - SNZB-02P / SNZB-02 / TH01 - Temperature and Humidity Sensor
-- SNZB-03 - Leak Sensor
+- SNZB-03 (eWeLink water sensor variant) - Leak Sensor
 - SNZB-03 / ms01 / MS01 / MSO1 - Motion Sensor
 - SNZB-03P - Motion Sensor 
 - SNZB-04 / SNZB-04P / DS01 - Windows / Door Sensor

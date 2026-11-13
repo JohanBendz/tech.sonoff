@@ -820,7 +820,7 @@
     },
     {
       "name": {
-        "en": "Leak sensor (SNZB-03)"
+        "en": "eWeLink Water Leak Sensor (SNZB-03)"
       },
       "class": "sensor",
       "platforms": [
@@ -855,11 +855,13 @@
               1,
               1280
             ],
-            "bindings": []
+            "bindings": [
+              1280
+            ]
           }
         },
         "learnmode": {
-          "image": "/drivers/SNZB-03/assets/learn.svg",
+          "image": "/drivers/SNZB-03/assets/icon.svg",
           "instruction": {
             "en": "Push a pin down the small hole on the other end of the device for aprox 8 seconds until the LED blinks rapidly."
           }
